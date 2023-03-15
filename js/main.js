@@ -17,24 +17,34 @@ const TREE = 21
 
 
 // Frame1: airport 
-const FRAME1 = d3.select("#length") 
+const FRAME1 = d3.select("#airportvis") 
 					.append("svg")
 						.attr("height", FRAME_HEIGHT)
 						.attr("width", FRAME_WIDTH)
-						.attr("class", "scattor-length");
+						.attr("class", "scatter-length");
+
+// Plot world map using d3 projection
+var projection = d3.geoEquirectangular();
+
+var path = d3.geoPath()
+    	.projection(projection);
+
+FRAME1.data(d3.geojson.features)
+		.join('path')
+		.attr('d', path);
 
 // Frame2: carbon emissions
 const FRAME2 = d3.select('#width')
 		          		.append('svg')
 		            		.attr('height', FRAME_HEIGHT)
 		            		.attr('width', FRAME_WIDTH)
-		            		.attr('class', 'scattor-width');
+		            		.attr('class', 'scatter-width');
 
 // function for builidng scatter plot (Sepal_length vs. Petal_Length)
-function createvis(){
+//function createvis(){
 
-	d3.csv("data/finaloutput.csv").then((data) => {
-	};
+	//d3.csv("data/finaloutput.csv").then((data) => {
+	//};
 
 // call the functions
 
