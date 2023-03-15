@@ -1,6 +1,6 @@
 // Declare constants
 const FRAME_HEIGHT = 500;
-const FRAME_WIDTH = 500;
+const FRAME_WIDTH = 700;
 const MARGINS = {left: 70, right: 70, top: 70, bottom: 70};
 
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
@@ -24,14 +24,27 @@ const FRAME1 = d3.select("#airportvis")
 						.attr("class", "scatter-length");
 
 // Plot world map using d3 projection
-var projection = d3.geoEquirectangular();
+var projection = d3.geoNaturalEarth1()
+					.scale(VIS_HEIGHT / 2.5)
+    				.translate([FRAME_WIDTH / 2, FRAME_HEIGHT / 2]);;
 
 var path = d3.geoPath()
     	.projection(projection);
 
-FRAME1.data(d3.geojson.features)
-		.join('path')
-		.attr('d', path);
+FRAME1.selectAll('path')
+		.append('path')
+		.attr('class', 'sphere')
+		.attr('d', path({type: 'Sphere'}));
+	
+d3.json('js/maps.json')
+	  .then(data => {
+		const countries = topojson.feature(data, data.objects.countries);
+		FRAME1.selectAll('path').data(countries.features)
+		  		.enter()
+				.append('path')
+				.attr('class', 'country')
+				.attr('d', path);
+	  });
 
 // Frame2: carbon emissions
 const FRAME2 = d3.select('#width')
