@@ -39,3 +39,7 @@ h2 {
   display: inline-block;
   display: flex;
 }
+
+.country {
+  fill: #00ab41;
+}
