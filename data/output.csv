@@ -1,0 +1,370 @@
+icao,iata,name,shortName,municipalityName,countryCode,lat,lon,from,averageDailyFlights
+KDCA,DCA,"Ronald Reagan Washington National, District of Columbia",Ronald Reagan Washington National,District of Columbia,US,38.8521,-77.0377,BOS,27.81
+KJFK,JFK,"John F Kennedy, New York",John F Kennedy,New York,US,40.6398,-73.7789,BOS,21.14
+KMCO,MCO,"Orlando, Orlando",,Orlando,US,28.4294,-81.309,BOS,17.29
+KLGA,LGA,"La Guardia, New York",La Guardia,New York,US,40.7772,-73.8726,BOS,15.88
+KORD,ORD,"Chicago O'Hare, Chicago",O'Hare,Chicago,US,41.9786,-87.9048,BOS,14.53
+KEWR,EWR,"Newark Liberty, Newark",Liberty,Newark,US,40.6925,-74.1687,BOS,13.68
+KATL,ATL,"Hartsfield Jackson Atlanta, Atlanta",Hartsfield Jackson,Atlanta,US,33.6367,-84.4281,BOS,13.29
+KPHL,PHL,"Philadelphia, Philadelphia",,Philadelphia,US,39.8719,-75.2411,BOS,11.43
+KCLT,CLT,"Charlotte Douglas, Charlotte",Douglas,Charlotte,US,35.214,-80.9431,BOS,11.01
+KFLL,FLL,"Fort Lauderdale Hollywood, Fort Lauderdale",Hollywood,Fort Lauderdale,US,26.0726,-80.1527,BOS,10.94
+KTPA,TPA,"Tampa, Tampa",,Tampa,US,27.9755,-82.5332,BOS,10.29
+KSFO,SFO,"San Francisco, San Francisco",,San Francisco,US,37.619,-122.375,BOS,10.01
+KLAX,LAX,"Los Angeles, Los Angeles",,Los Angeles,US,33.9425,-118.408,BOS,9.58
+KMIA,MIA,"Miami, Miami",,Miami,US,25.7932,-80.2906,BOS,9.0
+KRDU,RDU,"Raleigh Durham, Raleigh/Durham",Raleigh Durham,Raleigh/Durham,US,35.8776,-78.7875,BOS,8.39
+KDFW,DFW,"Dallas Fort Worth, Dallas-Fort Worth",Dallas Fort Worth,Dallas-Fort Worth,US,32.8968,-97.038,BOS,8.05
+EGLL,LHR,"London Heathrow, London",Heathrow,London,GB,51.4706,-0.461941,BOS,7.86
+KBWI,BWI,"Baltimore/Washington  Thurgood Marshall, Baltimore",Washington  Thurgood Marshall,Baltimore,US,39.1754,-76.6683,BOS,7.15
+KPBI,PBI,"Palm Beach, West Palm Beach",Palm Beach,West Palm Beach,US,26.6832,-80.0956,BOS,6.93
+KDTW,DTW,"Detroit Metropolitan Wayne County, Detroit",Metropolitan Wayne County,Detroit,US,42.2124,-83.3534,BOS,6.86
+KPIT,PIT,"Pittsburgh, Pittsburgh",,Pittsburgh,US,40.4915,-80.2329,BOS,6.57
+KRSW,RSW,"Southwest Florida, Fort Myers",Southwest Florida,Fort Myers,US,26.5362,-81.7552,BOS,6.51
+KSEA,SEA,"Seattle Tacoma, Seattle",Tacoma,Seattle,US,47.449,-122.309,BOS,6.01
+KDEN,DEN,"Denver, Denver",,Denver,US,39.8617,-104.673,BOS,5.85
+KMSP,MSP,"Minneapolis-St Paul /Wold-Chamberlain, Minneapolis",St Paul /Wold-Chamberlain,Minneapolis,US,44.882,-93.2218,BOS,5.73
+TJSJ,SJU,"Luis Munoz Marin, San Juan",Luis Munoz Marin,San Juan,PR,18.4394,-66.0018,BOS,5.58
+KCLE,CLE,"Cleveland Hopkins, Cleveland",Hopkins,Cleveland,US,41.4117,-81.8498,BOS,5.43
+KCVG,CVG,"Cincinnati Northern Kentucky, Cincinnati",Northern Kentucky,Cincinnati,US,39.0488,-84.6678,BOS,5.29
+KRIC,RIC,"Richmond, Richmond",,Richmond,US,37.5052,-77.3197,BOS,5.29
+KACK,ACK,"Nantucket Memorial, Nantucket",Memorial,Nantucket,US,41.2531,-70.0602,BOS,4.73
+KAUS,AUS,"Austin Bergstrom, Austin",Bergstrom,Austin,US,30.194498,-97.6699,BOS,4.59
+KMVY,MVY,"Martha's Vineyard, Martha's Vineyard",,Martha's Vineyard,US,41.3931,-70.6143,BOS,4.31
+KIAH,IAH,"George Bush Intercontinental Houston, Houston",George Bush Intercontinental,Houston,US,29.9844,-95.3414,BOS,4.16
+TNCA,AUA,"Queen Beatrix, Oranjestad",Queen Beatrix,Oranjestad,AW,12.501399,-70.0152,BOS,4.14
+KIAD,IAD,"Washington Dulles, District of Columbia",Washington Dulles,District of Columbia,US,38.9445,-77.4558,BOS,4.04
+KCMH,CMH,"Port Columbus, Columbus",Port,Columbus,US,39.998,-82.8919,BOS,4.0
+KPHX,PHX,"Phoenix Sky Harbor, Phoenix",Sky Harbor,Phoenix,US,33.4343,-112.012,BOS,3.72
+CYYZ,YYZ,"Lester B. Pearson, Toronto",Lester B. Pearson,Toronto,CA,43.6772,-79.6306,BOS,3.57
+KMDW,MDW,"Chicago Midway, Chicago",Midway,Chicago,US,41.786,-87.7524,BOS,3.53
+KIND,IND,"Indianapolis, Indianapolis",,Indianapolis,US,39.7173,-86.2944,BOS,3.44
+KMSY,MSY,"Louis Armstrong New Orleans, New Orleans",Louis Armstrong,New Orleans,US,29.9934,-90.258,BOS,3.14
+BIKF,KEF,"Keflavik, Reykjavik",Keflavik,Reykjavik,IS,63.985,-22.6056,BOS,3.14
+KTEB,TEB,"Teterboro, Teterboro",,Teterboro,US,40.8501,-74.0608,BOS,3.14
+KJAX,JAX,"Jacksonville, Jacksonville",,Jacksonville,US,30.4941,-81.6879,BOS,3.04
+KBUF,BUF,"Buffalo Niagara, Buffalo",Niagara,Buffalo,US,42.9405,-78.7322,BOS,3.0
+KRUT,RUT,"Rutland - Southern Vermont Regional, Rutland",Southern Vermont Regional,Rutland,US,43.5294,-72.9496,BOS,3.0
+KBNA,BNA,"Nashville, Nashville",,Nashville,US,36.1245,-86.6782,BOS,2.98
+KCHS,CHS,"Charleston Air Force Base-, Charleston",Air Force Base,Charleston,US,32.8986,-80.0405,BOS,2.89
+KSLC,SLC,"Salt Lake City, Salt Lake City",,Salt Lake City,US,40.7884,-111.978,BOS,2.89
+KRKD,RKD,"Knox County Regional, Rockland",Knox County Regional,Rockland,US,44.0601,-69.0992,BOS,2.86
+CYTZ,YTZ,"Billy Bishop Toronto City Centre, Toronto",Billy Bishop  City Centre,Toronto,CA,43.6275,-79.3962,BOS,2.86
+KSRQ,SRQ,"Sarasota Bradenton, Sarasota/Bradenton",Sarasota Bradenton,Sarasota/Bradenton,US,27.3954,-82.5544,BOS,2.75
+KLEB,LEB,"Lebanon Municipal, Lebanon",Municipal,Lebanon,US,43.6261,-72.3042,BOS,2.71
+CYUL,YUL,"Montréal Pierre Elliott Trudeau, Montréal",Pierre Elliott Trudeau,Montréal,CA,45.4706,-73.7408,BOS,2.71
+KBHB,BHB,"Hancock County-Bar Harbor, Bar Harbor",Hancock County,Bar Harbor,US,44.45,-68.3615,BOS,2.65
+KROC,ROC,"Greater Rochester, Rochester",Greater,Rochester,US,43.1189,-77.6724,BOS,2.59
+MDPC,PUJ,"Punta Cana, Punta Cana",,Punta Cana,DO,18.567398,-68.3634,BOS,2.57
+KLAS,LAS,"McCarran, Las Vegas",McCarran,Las Vegas,US,36.0801,-115.152,BOS,2.45
+KSAN,SAN,"San Diego, San Diego",,San Diego,US,32.7336,-117.19,BOS,2.45
+MYNN,NAS,"Lynden Pindling, Nassau",Lynden Pindling,Nassau,BS,25.039,-77.4662,BOS,2.43
+KHPN,HPN,"Westchester County, White Plains",Westchester County,White Plains,US,41.067,-73.7076,BOS,2.29
+MMUN,CUN,"Cancún, Cancún",,Cancún,MX,21.0365,-86.8771,BOS,2.29
+KSTL,STL,"Lambert St Louis, Saint Louis",Lambert St Louis,Saint Louis,US,38.7487,-90.37,BOS,2.22
+KPVC,PVC,"Provincetown Municipal, Provincetown",Municipal,Provincetown,US,42.0719,-70.2214,BOS,2.14
+KMCI,MCI,"Kansas City, Kansas City",,Kansas City,US,39.2976,-94.7139,BOS,2.02
+KAUG,AUG,"Augusta State, Augusta",State,Augusta,US,44.3206,-69.7973,BOS,2.0
+KMSS,MSS,"Massena  Richards Field, Massena",Richards Field,Massena,US,44.9358,-74.8456,BOS,2.0
+KMKE,MKE,"General Mitchell, Milwaukee",General Mitchell,Milwaukee,US,42.9472,-87.8966,BOS,1.9
+EIDW,DUB,"Dublin, Dublin",,Dublin,IE,53.4213,-6.27007,BOS,1.86
+LFPG,CDG,"Charles de Gaulle, Paris",Charles de Gaulle,Paris,FR,49.0128,2.549999,BOS,1.71
+KSLK,SLK,"Adirondack Regional, Saranac Lake",Adirondack Regional,Saranac Lake,US,44.3853,-74.2062,BOS,1.61
+KSYR,SYR,"Syracuse Hancock, Syracuse",Hancock,Syracuse,US,43.1112,-76.1063,BOS,1.59
+KBED,BED,"Laurence G Hanscom Field, Bedford",Laurence G Hanscom Field,Bedford,US,42.47,-71.289,BOS,1.57
+LPPT,LIS,"Lisbon Portela, Lisbon",Portela,Lisbon,PT,38.7813,-9.135919,BOS,1.43
+EHAM,AMS,"Amsterdam Schiphol, Amsterdam",Schiphol,Amsterdam,NL,52.3086,4.763889,BOS,1.29
+KHYA,HYA,"Barnstable Municipal Boardman Polando Field, Hyannis",Barnstable Municipal Boardman Polando Field,Hyannis,US,41.6693,-70.2804,BOS,1.29
+OTHH,DOH,"Hamad, Doha",Hamad,Doha,QA,25.273056,51.608055,BOS,1.14
+KSAT,SAT,"San Antonio, San Antonio",,San Antonio,US,29.5337,-98.4698,BOS,1.14
+KMYR,MYR,"Myrtle Beach, Myrtle Beach",,Myrtle Beach,US,33.6797,-78.9283,BOS,1.02
+OMDB,DXB,"Dubai, Dubai City",Dubai,Dubai City,AE,25.252798,55.3644,BOS,1.0
+KFRG,FRG,"Republic, Farmingdale",Republic,Farmingdale,US,40.7288,-73.4134,BOS,1.0
+EDDF,FRA,"Frankfurt-am-Main, Frankfurt-am-Main",,Frankfurt-am-Main,DE,50.0264,8.543129,BOS,1.0
+CYHZ,YHZ,"Halifax / Stanfield, Halifax",Stanfield,Halifax,CA,44.8808,-63.5086,BOS,1.0
+KEYW,EYW,"Key West, Key West",,Key West,US,24.5561,-81.7596,BOS,1.0
+EGKK,LGW,"London Gatwick, London",Gatwick,London,GB,51.1481,-0.190277,BOS,1.0
+KSDF,SDF,"Louisville  Standiford Field, Louisville",Standiford Field,Louisville,US,38.1744,-85.736,BOS,1.0
+EDDM,MUC,"Munich, Munich",,Munich,DE,48.3538,11.7861,BOS,1.0
+MDST,STI,"Cibao, Santiago",Cibao,Santiago,DO,19.4061,-70.6047,BOS,1.0
+KSAV,SAV,"Savannah Hilton Head, Savannah",Hilton Head,Savannah,US,32.1276,-81.2021,BOS,1.0
+RJAA,NRT,"Narita, Tokyo",Narita,Tokyo,JP,35.7647,140.386,BOS,1.0
+LSZH,ZRH,"Kloten, Zurich",Kloten,Zurich,CH,47.4647,8.549169,BOS,1.0
+MKJS,MBJ,"Sangster, Montego Bay",Sangster,Montego Bay,JM,18.5037,-77.9134,BOS,0.87
+KMDT,MDT,"Harrisburg, Harrisburg",,Harrisburg,US,40.1935,-76.7634,BOS,0.86
+KMEM,MEM,"Memphis, Memphis",,Memphis,US,35.0424,-89.9767,BOS,0.86
+KPDX,PDX,"Portland, Portland",,Portland,US,45.5887,-122.598,BOS,0.86
+MDSD,SDQ,"Las Américas, Santo Domingo City",Las Américas,Santo Domingo City,DO,18.4297,-69.6689,BOS,0.86
+EINN,SNN,"Shannon, Limerick city",Shannon,Limerick city,IE,52.702,-8.924819,BOS,0.86
+PHNL,HNL,"Honolulu, Honolulu",,Honolulu,US,21.3187,-157.922,BOS,0.71
+LPPD,PDL,"João Paulo II, Ponta Delgada",João Paulo II,Ponta Delgada,PT,37.7412,-25.6979,BOS,0.6
+KBZN,BZN,"Gallatin Field, Bozeman",Gallatin Field,Bozeman,US,45.7775,-111.153,BOS,0.57
+KBTV,BTV,"Burlington, Burlington",,Burlington,US,44.4719,-73.1533,BOS,0.57
+LTFM,IST,"Istanbul, Istanbul",,Istanbul,TR,41.275276,28.751944,BOS,0.57
+LEMD,MAD,"Adolfo Suárez Madrid–Barajas, Madrid",Adolfo Suárez –Barajas,Madrid,ES,40.4936,-3.56676,BOS,0.57
+KMHT,MHT,"Manchester, Manchester",,Manchester,US,42.9326,-71.4357,BOS,0.57
+KMMU,MMU,"Morristown Municipal, Morristown",Municipal,Morristown,US,40.7994,-74.4149,BOS,0.57
+MPTO,PTY,"Tocumen, Tocumen",,Tocumen,PA,9.071359,-79.3835,BOS,0.57
+KPSM,PSM,"Portsmouth  at Pease, Portsmouth",at Pease,Portsmouth,US,43.0779,-70.8233,BOS,0.57
+KHDN,HDN,"Yampa Valley, Hayden",Yampa Valley,Hayden,US,40.4812,-107.218,BOS,0.57
+TNCM,SXM,"Princess Juliana, Saint Martin",Princess Juliana,Saint Martin,SX,18.041,-63.1089,BOS,0.5
+MBPV,PLS,"Providenciales, Providenciales Island",Providenciales,Providenciales Island,TC,21.7736,-72.2659,BOS,0.45
+TIST,STT,"Cyril E. King, Charlotte Amalie, Harry S. Truman Airport",Cyril E. King,"Charlotte Amalie, Harry S. Truman Airport",VI,18.3373,-64.9734,BOS,0.45
+EKCH,CPH,"Copenhagen Kastrup, Copenhagen",Kastrup,Copenhagen,DK,55.6179,12.656,BOS,0.43
+KNZY,NZY,"North Island Naval Air Station-Halsey Field, San Diego",North Island Naval Air Station-Halsey Field,San Diego,US,32.6992,-117.215,BOS,0.43
+SBGR,GRU,"Guarulhos - Governador André Franco Montoro, São Paulo",Guarulhos - Governador André Franco Montoro,São Paulo,BR,-23.435556,-46.473057,BOS,0.43
+RKSI,ICN,"Incheon, Seoul",Incheon,Seoul,KR,37.4691,126.451,BOS,0.43
+KAVL,AVL,"Asheville Regional, Asheville",Regional,Asheville,US,35.4362,-82.5418,BOS,0.29
+KPDK,PDK,"DeKalb Peachtree, Atlanta",DeKalb Peachtree,Atlanta,US,33.8756,-84.302,BOS,0.29
+LEBL,BCN,"Barcelona, Barcelona",,Barcelona,ES,41.2971,2.078459,BOS,0.29
+KBLM,BLM,"Monmouth Executive, Belmar/Farmingdale",Monmouth Executive,Belmar/Farmingdale,US,40.1869,-74.1249,BOS,0.29
+KCHO,CHO,"Charlottesville Albemarle, Charlottesville",Albemarle,Charlottesville,US,38.1386,-78.4529,BOS,0.29
+KVPS,VPS,"Eglin Air Force Base, Valparaiso",Eglin Air Force Base,Valparaiso,US,30.4832,-86.5254,BOS,0.29
+KGSP,GSP,"Greenville Spartanburg, Greenville",Spartanburg,Greenville,US,34.8957,-82.2189,BOS,0.29
+KAPF,APF,"Naples Municipal, Naples",Municipal,Naples,US,26.1526,-81.7753,BOS,0.29
+LLBG,TLV,"Ben Gurion, Tel Aviv Yafo",Ben Gurion,Tel Aviv Yafo,IL,32.0114,34.8867,BOS,0.29
+KBGR,BGR,"Bangor, Bangor",,Bangor,US,44.8074,-68.8281,BOS,0.14
+KBCT,BCT,"Boca Raton, Boca Raton",,Boca Raton,US,26.378498,-80.1077,BOS,0.14
+TBPB,BGI,"Sir Grantley Adams, Bridgetown",Sir Grantley Adams,Bridgetown,BB,13.0746,-59.4925,BOS,0.14
+KCDW,CDW,"Essex County, Caldwell",Essex County,Caldwell,US,40.8752,-74.2814,BOS,0.14
+KCRQ,CLD,"Mc Clellan-Palomar, Carlsbad",Mc Clellan-Palomar,Carlsbad,US,33.1283,-117.28,BOS,0.14
+KBKL,BKL,"Burke Lakefront, Cleveland",Burke Lakefront,Cleveland,US,41.5175,-81.6833,BOS,0.14
+KCGF,CGF,"Cuyahoga County, Cleveland",Cuyahoga County,Cleveland,US,41.5651,-81.4864,BOS,0.14
+KMQS,CTH,"Chester County G O Carlson, Coatesville",Chester County G O Carlson,Coatesville,US,39.979,-75.8655,BOS,0.14
+KDAL,DAL,"Dallas Love Field, Dallas",Love Field,Dallas,US,32.8471,-96.8518,BOS,0.14
+KEGE,EGE,"Eagle County Regional, Eagle",County Regional,Eagle,US,39.6426,-106.918,BOS,0.14
+KESN,ESN,"Easton Newnam Field, Easton",Newnam Field,Easton,US,38.8042,-76.069,BOS,0.14
+MWCR,GCM,"Owen Roberts, Georgetown",Owen Roberts,Georgetown,KY,19.2928,-81.3577,BOS,0.14
+KBDL,BDL,"Bradley, Hartford",Bradley,Hartford,US,41.9389,-72.6832,BOS,0.14
+VHHH,HKG,"Chek Lap Kok, Hong Kong",Chek Lap Kok,Hong Kong,HK,22.3089,113.915,BOS,0.14
+KLEX,LEX,"Blue Grass, Lexington",Blue Grass,Lexington,US,38.0365,-84.6059,BOS,0.14
+MRLB,LIR,"Daniel Oduber Quiros, Liberia",Daniel Oduber Quiros,Liberia,CR,10.593299,-85.5444,BOS,0.14
+EGGW,LTN,"London Luton, London",Luton,London,GB,51.8747,-0.368333,BOS,0.14
+KONT,ONT,"Ontario, Ontario",,Ontario,US,34.056,-117.601,BOS,0.14
+KEWB,EWB,"New Bedford Regional, New Bedford",Regional,New Bedford,US,41.6761,-70.9569,BOS,0.14
+KPHF,PHF,"Newport News Williamsburg, Newport News",Williamsburg,Newport News,US,37.1319,-76.493,BOS,0.14
+MYEH,ELH,"North Eleuthera, North Eleuthera",,North Eleuthera,BS,25.4749,-76.6835,BOS,0.14
+KECP,ECP,"Northwest Florida Beaches, Panama City Beach",Northwest Florida Beaches,Panama City Beach,US,30.3417,-85.7973,BOS,0.14
+KLOM,BBX,"Wings Field, Philadelphia",Wings Field,Philadelphia,US,40.1375,-75.2651,BOS,0.14
+KSOP,SOP,"Moore County, Pinehurst/Southern Pines",Moore County,Pinehurst/Southern Pines,US,35.2374,-79.3912,BOS,0.14
+KPVD,PVD,"Theodore Francis Green State, Providence",Theodore Francis Green State,Providence,US,41.7326,-71.4204,BOS,0.14
+MDPP,POP,"Gregorio Luperon, Puerto Plata",Gregorio Luperon,Puerto Plata,DO,19.7579,-70.57,BOS,0.14
+KSDL,SCF,"Scottsdale, Scottsdale",,Scottsdale,US,33.6229,-111.911,BOS,0.14
+TLPL,UVF,"Hewanorra, Vieux Fort",Hewanorra,Vieux Fort,LC,13.7332,-60.9526,BOS,0.14
+KMQY,MQY,"Smyrna, Smyrna",,Smyrna,US,36.009,-86.5201,BOS,0.14
+KSGH,SGH,"Springfield-Beckley Municipal, Springfield",Beckley Municipal,Springfield,US,39.8403,-83.8402,BOS,0.14
+KSUA,SUA,"Witham Field, Stuart",Witham Field,Stuart,US,27.1817,-80.2211,BOS,0.14
+LPLA,TER,"Lajes Field, Lajes",Field,Lajes,PT,38.7618,-27.0908,BOS,0.14
+KRDG,RDG,"Reading Regional Carl A Spaatz Field, Reading",Regional Carl A Spaatz Field,Reading,US,40.3785,-75.9652,BOS,0.14
+KYIP,YIP,"Willow Run, Detroit",Willow Run,Detroit,US,42.2379,-83.5304,BOS,0.14
+KILM,ILM,"Wilmington, Wilmington",,Wilmington,US,34.2706,-77.9026,BOS,0.14
+KORH,ORH,"Worcester Regional, Worcester",Regional,Worcester,US,42.2673,-71.8757,BOS,0.14
+KLAX,LAX,"Los Angeles, Los Angeles",,Los Angeles,US,33.9425,-118.408,JFK,23.43
+KBOS,BOS,"General Edward Lawrence Logan, Boston",General Edward Lawrence Logan,Boston,US,42.3643,-71.0052,JFK,23.15
+KMIA,MIA,"Miami, Miami",,Miami,US,25.7932,-80.2906,JFK,17.57
+KSFO,SFO,"San Francisco, San Francisco",,San Francisco,US,37.619,-122.375,JFK,17.11
+EGLL,LHR,"London Heathrow, London",Heathrow,London,GB,51.4706,-0.461941,JFK,16.86
+KMCO,MCO,"Orlando, Orlando",,Orlando,US,28.4294,-81.309,JFK,14.73
+KRDU,RDU,"Raleigh Durham, Raleigh/Durham",Raleigh Durham,Raleigh/Durham,US,35.8776,-78.7875,JFK,13.86
+KATL,ATL,"Hartsfield Jackson Atlanta, Atlanta",Hartsfield Jackson,Atlanta,US,33.6367,-84.4281,JFK,12.0
+KFLL,FLL,"Fort Lauderdale Hollywood, Fort Lauderdale",Hollywood,Fort Lauderdale,US,26.0726,-80.1527,JFK,9.99
+KBUF,BUF,"Buffalo Niagara, Buffalo",Niagara,Buffalo,US,42.9405,-78.7322,JFK,8.59
+LFPG,CDG,"Charles de Gaulle, Paris",Charles de Gaulle,Paris,FR,49.0128,2.549999,JFK,8.29
+KDCA,DCA,"Ronald Reagan Washington National, District of Columbia",Ronald Reagan Washington National,District of Columbia,US,38.8521,-77.0377,JFK,8.0
+KSEA,SEA,"Seattle Tacoma, Seattle",Tacoma,Seattle,US,47.449,-122.309,JFK,8.0
+TJSJ,SJU,"Luis Munoz Marin, San Juan",Luis Munoz Marin,San Juan,PR,18.4394,-66.0018,JFK,7.73
+MDSD,SDQ,"Las Américas, Santo Domingo City",Las Américas,Santo Domingo City,DO,18.4297,-69.6689,JFK,7.71
+MDST,STI,"Cibao, Santiago",Cibao,Santiago,DO,19.4061,-70.6047,JFK,7.57
+KORD,ORD,"Chicago O'Hare, Chicago",O'Hare,Chicago,US,41.9786,-87.9048,JFK,7.29
+KCLT,CLT,"Charlotte Douglas, Charlotte",Douglas,Charlotte,US,35.214,-80.9431,JFK,7.21
+LIRF,FCO,"Leonardo da Vinci–Fiumicino, Rome",Leonardo da Vinci–Fiumicino,Rome,IT,41.8045,12.2508,JFK,7.14
+KBNA,BNA,"Nashville, Nashville",,Nashville,US,36.1245,-86.6782,JFK,6.82
+KPBI,PBI,"Palm Beach, West Palm Beach",Palm Beach,West Palm Beach,US,26.6832,-80.0956,JFK,6.74
+KDTW,DTW,"Detroit Metropolitan Wayne County, Detroit",Metropolitan Wayne County,Detroit,US,42.2124,-83.3534,JFK,6.59
+KCMH,CMH,"Port Columbus, Columbus",Port,Columbus,US,39.998,-82.8919,JFK,6.44
+MMMX,MEX,"Licenciado Benito Juarez, Mexico City",Licenciado Benito Juarez,Mexico City,MX,19.4363,-99.0721,JFK,6.43
+KLAS,LAS,"McCarran, Las Vegas",McCarran,Las Vegas,US,36.0801,-115.152,JFK,6.36
+MMUN,CUN,"Cancún, Cancún",,Cancún,MX,21.0365,-86.8771,JFK,6.33
+KIND,IND,"Indianapolis, Indianapolis",,Indianapolis,US,39.7173,-86.2944,JFK,6.02
+KDFW,DFW,"Dallas Fort Worth, Dallas-Fort Worth",Dallas Fort Worth,Dallas-Fort Worth,US,32.8968,-97.038,JFK,5.9
+CYYZ,YYZ,"Lester B. Pearson, Toronto",Lester B. Pearson,Toronto,CA,43.6772,-79.6306,JFK,5.82
+KTPA,TPA,"Tampa, Tampa",,Tampa,US,27.9755,-82.5332,JFK,5.79
+KAUS,AUS,"Austin Bergstrom, Austin",Bergstrom,Austin,US,30.194498,-97.6699,JFK,5.64
+KBTV,BTV,"Burlington, Burlington",,Burlington,US,44.4719,-73.1533,JFK,5.58
+MKJS,MBJ,"Sangster, Montego Bay",Sangster,Montego Bay,JM,18.5037,-77.9134,JFK,5.57
+KROC,ROC,"Greater Rochester, Rochester",Greater,Rochester,US,43.1189,-77.6724,JFK,5.57
+KPHX,PHX,"Phoenix Sky Harbor, Phoenix",Sky Harbor,Phoenix,US,33.4343,-112.012,JFK,5.47
+KSLC,SLC,"Salt Lake City, Salt Lake City",,Salt Lake City,US,40.7884,-111.978,JFK,5.4
+KCVG,CVG,"Cincinnati Northern Kentucky, Cincinnati",Northern Kentucky,Cincinnati,US,39.0488,-84.6678,JFK,5.29
+KSAN,SAN,"San Diego, San Diego",,San Diego,US,32.7336,-117.19,JFK,5.16
+KCLE,CLE,"Cleveland Hopkins, Cleveland",Hopkins,Cleveland,US,41.4117,-81.8498,JFK,5.14
+KMSP,MSP,"Minneapolis-St Paul /Wold-Chamberlain, Minneapolis",St Paul /Wold-Chamberlain,Minneapolis,US,44.882,-93.2218,JFK,5.14
+KCHS,CHS,"Charleston Air Force Base-, Charleston",Air Force Base,Charleston,US,32.8986,-80.0405,JFK,5.01
+KJAX,JAX,"Jacksonville, Jacksonville",,Jacksonville,US,30.4941,-81.6879,JFK,5.0
+KORF,ORF,"Norfolk, Norfolk",,Norfolk,US,36.8946,-76.2012,JFK,4.93
+EGKK,LGW,"London Gatwick, London",Gatwick,London,GB,51.1481,-0.190277,JFK,4.86
+MDPC,PUJ,"Punta Cana, Punta Cana",,Punta Cana,DO,18.567398,-68.3634,JFK,4.86
+KRSW,RSW,"Southwest Florida, Fort Myers",Southwest Florida,Fort Myers,US,26.5362,-81.7552,JFK,4.43
+KPIT,PIT,"Pittsburgh, Pittsburgh",,Pittsburgh,US,40.4915,-80.2329,JFK,4.42
+EHAM,AMS,"Amsterdam Schiphol, Amsterdam",Schiphol,Amsterdam,NL,52.3086,4.763889,JFK,4.14
+SKBO,BOG,"El Dorado, Bogotá",El Dorado,Bogotá,CO,4.70159,-74.1469,JFK,4.0
+MYNN,NAS,"Lynden Pindling, Nassau",Lynden Pindling,Nassau,BS,25.039,-77.4662,JFK,4.0
+LEMD,MAD,"Adolfo Suárez Madrid–Barajas, Madrid",Adolfo Suárez –Barajas,Madrid,ES,40.4936,-3.56676,JFK,3.86
+KDEN,DEN,"Denver, Denver",,Denver,US,39.8617,-104.673,JFK,3.85
+LIMC,MXP,"Malpensa, Milan",Malpensa,Milan,IT,45.6306,8.72811,JFK,3.85
+KSAV,SAV,"Savannah Hilton Head, Savannah",Hilton Head,Savannah,US,32.1276,-81.2021,JFK,3.61
+KSYR,SYR,"Syracuse Hancock, Syracuse",Hancock,Syracuse,US,43.1112,-76.1063,JFK,3.53
+TNCA,AUA,"Queen Beatrix, Oranjestad",Queen Beatrix,Oranjestad,AW,12.501399,-70.0152,JFK,3.43
+LSZH,ZRH,"Kloten, Zurich",Kloten,Zurich,CH,47.4647,8.549169,JFK,3.29
+LLBG,TLV,"Ben Gurion, Tel Aviv Yafo",Ben Gurion,Tel Aviv Yafo,IL,32.0114,34.8867,JFK,3.14
+KIAD,IAD,"Washington Dulles, District of Columbia",Washington Dulles,District of Columbia,US,38.9445,-77.4558,JFK,3.13
+RKSI,ICN,"Incheon, Seoul",Incheon,Seoul,KR,37.4691,126.451,JFK,3.07
+PANC,ANC,"Ted Stevens Anchorage, Anchorage",Ted Stevens,Anchorage,US,61.1744,-149.996,JFK,3.0
+MKJP,KIN,"Norman Manley, Kingston",Norman Manley,Kingston,JM,17.9357,-76.7875,JFK,3.0
+MPTO,PTY,"Tocumen, Tocumen",,Tocumen,PA,9.071359,-79.3835,JFK,3.0
+SBGR,GRU,"Guarulhos - Governador André Franco Montoro, São Paulo",Guarulhos - Governador André Franco Montoro,São Paulo,BR,-23.435556,-46.473057,JFK,3.0
+EBBR,BRU,"Brussels, Brussels",,Brussels,BE,50.9014,4.484439,JFK,2.86
+EDDF,FRA,"Frankfurt-am-Main, Frankfurt-am-Main",,Frankfurt-am-Main,DE,50.0264,8.543129,JFK,2.86
+LTFM,IST,"Istanbul, Istanbul",,Istanbul,TR,41.275276,28.751944,JFK,2.86
+KORH,ORH,"Worcester Regional, Worcester",Regional,Worcester,US,42.2673,-71.8757,JFK,2.86
+EGCC,MAN,"Manchester, Manchester",,Manchester,GB,53.3537,-2.27495,JFK,2.71
+MMSD,SJD,"Los Cabos, San José del Cabo",Los Cabos,San José del Cabo,MX,23.1518,-109.721,JFK,2.71
+SYCJ,GEO,"Cheddi Jagan, Georgetown",Cheddi Jagan,Georgetown,GY,6.498549,-58.2541,JFK,2.61
+OTHH,DOH,"Hamad, Doha",Hamad,Doha,QA,25.273056,51.608055,JFK,2.57
+TTPP,POS,"Piarco, Port of Spain",Piarco,Port of Spain,TT,10.595399,-61.3372,JFK,2.57
+KPWM,PWM,"Portland  Jetport, Portland",Jetport,Portland,US,43.6462,-70.3093,JFK,2.57
+MSLP,SAL,"El Salvador, Santa Clara",El Salvador,Santa Clara,SV,13.440899,-89.0557,JFK,2.53
+LEBL,BCN,"Barcelona, Barcelona",,Barcelona,ES,41.2971,2.078459,JFK,2.43
+KMSY,MSY,"Louis Armstrong New Orleans, New Orleans",Louis Armstrong,New Orleans,US,29.9934,-90.258,JFK,2.37
+KBWI,BWI,"Baltimore/Washington  Thurgood Marshall, Baltimore",Washington  Thurgood Marshall,Baltimore,US,39.1754,-76.6683,JFK,2.29
+KRIC,RIC,"Richmond, Richmond",,Richmond,US,37.5052,-77.3197,JFK,2.29
+RJTT,HND,"Tokyo, Tokyo",,Tokyo,JP,35.5523,139.78,JFK,2.29
+KMCI,MCI,"Kansas City, Kansas City",,Kansas City,US,39.2976,-94.7139,JFK,2.18
+TJBQ,BQN,"Rafael Hernandez, Aguadilla",Rafael Hernandez,Aguadilla,PR,18.4949,-67.1294,JFK,2.14
+KPDX,PDX,"Portland, Portland",,Portland,US,45.5887,-122.598,JFK,2.14
+KITH,ITH,"Ithaca Tompkins Regional, Ithaca",Tompkins Regional,Ithaca,US,42.491,-76.4584,JFK,2.02
+MBPV,PLS,"Providenciales, Providenciales Island",Providenciales,Providenciales Island,TC,21.7736,-72.2659,JFK,2.01
+KBGR,BGR,"Bangor, Bangor",,Bangor,US,44.8074,-68.8281,JFK,2.0
+OMDB,DXB,"Dubai, Dubai City",Dubai,Dubai City,AE,25.252798,55.3644,JFK,2.0
+EIDW,DUB,"Dublin, Dublin",,Dublin,IE,53.4213,-6.27007,JFK,2.0
+VHHH,HKG,"Chek Lap Kok, Hong Kong",Chek Lap Kok,Hong Kong,HK,22.3089,113.915,JFK,2.0
+PHNL,HNL,"Honolulu, Honolulu",,Honolulu,US,21.3187,-157.922,JFK,2.0
+KIAH,IAH,"George Bush Intercontinental Houston, Houston",George Bush Intercontinental,Houston,US,29.9844,-95.3414,JFK,2.0
+TIST,STT,"Cyril E. King, Charlotte Amalie, Harry S. Truman Airport",Cyril E. King,"Charlotte Amalie, Harry S. Truman Airport",VI,18.3373,-64.9734,JFK,2.0
+VIDP,DEL,"Indira Gandhi, New Delhi",Indira Gandhi,New Delhi,IN,28.5665,77.1031,JFK,1.87
+TNCM,SXM,"Princess Juliana, Saint Martin",Princess Juliana,Saint Martin,SX,18.041,-63.1089,JFK,1.87
+SEGU,GYE,"José Joaquín de Olmedo, Guayaquil",José Joaquín de Olmedo,Guayaquil,EC,-2.157419,-79.8836,JFK,1.86
+LPPT,LIS,"Lisbon Portela, Lisbon",Portela,Lisbon,PT,38.7813,-9.135919,JFK,1.86
+OMAA,AUH,"Abu Dhabi, Abu Dhabi Island and Internal Islands City",Abu Dhabi,Abu Dhabi Island and Internal Islands City,AE,24.433,54.6511,JFK,1.71
+KMKE,MKE,"General Mitchell, Milwaukee",General Mitchell,Milwaukee,US,42.9472,-87.8966,JFK,1.71
+TAPA,ANU,"V.C. Bird, St. George",V.C. Bird,St. George,AG,17.1367,-61.7927,JFK,1.57
+SAEZ,EZE,"Ministro Pistarini, Buenos Aires",Ministro Pistarini,Buenos Aires,AR,-34.8222,-58.5358,JFK,1.57
+TBPB,BGI,"Sir Grantley Adams, Bridgetown",Sir Grantley Adams,Bridgetown,BB,13.0746,-59.4925,JFK,1.43
+MWCR,GCM,"Owen Roberts, Georgetown",Owen Roberts,Georgetown,KY,19.2928,-81.3577,JFK,1.43
+BIKF,KEF,"Keflavik, Reykjavik",Keflavik,Reykjavik,IS,63.985,-22.6056,JFK,1.43
+TXKF,BDA,"L.F. Wade, Hamilton",L.F. Wade,Hamilton,BM,32.364,-64.6787,JFK,1.37
+LSGG,GVA,"Geneva Cointrin, Geneva",Cointrin,Geneva,CH,46.2381,6.10895,JFK,1.29
+MROC,SJO,"Juan Santamaria, San José",Juan Santamaria,San José,CR,9.99386,-84.2088,JFK,1.2
+GMMN,CMN,"Mohammed V, Casablanca",Mohammed V,Casablanca,MA,33.3675,-7.58997,JFK,1.14
+MRLB,LIR,"Daniel Oduber Quiros, Liberia",Daniel Oduber Quiros,Liberia,CR,10.593299,-85.5444,JFK,1.14
+KSRQ,SRQ,"Sarasota Bradenton, Sarasota/Bradenton",Sarasota Bradenton,Sarasota/Bradenton,US,27.3954,-82.5544,JFK,1.14
+MGGT,GUA,"La Aurora, Guatemala City",La Aurora,Guatemala City,GT,14.583299,-90.5275,JFK,1.12
+RCTP,TPE,"Taiwan Taoyuan, Taipei",Taiwan Taoyuan,Taipei,TW,25.0777,121.233,JFK,1.06
+KSAT,SAT,"San Antonio, San Antonio",,San Antonio,US,29.5337,-98.4698,JFK,1.02
+SKRG,MDE,"Jose Maria Córdova, Rionegro",Jose Maria Córdova,Rionegro,CO,6.16454,-75.4231,JFK,1.02
+DGAA,ACC,"Kotoka, Accra",Kotoka,Accra,GH,5.605189,-0.166786,JFK,1.0
+HECA,CAI,"Cairo, Cairo",,Cairo,EG,30.1219,31.4056,JFK,1.0
+SKCG,CTG,"Rafael Nuñez, Cartagena de Indias",Rafael Nuñez,Cartagena de Indias,CO,10.4424,-75.513,JFK,1.0
+KRFD,RFD,"Chicago Rockford, Chicago/Rockford",Chicago Rockford,Chicago/Rockford,US,42.1954,-89.0972,JFK,1.0
+KAFW,AFW,"Fort Worth Alliance, Fort Worth",Alliance,Fort Worth,US,32.9876,-97.3188,JFK,1.0
+TGPY,GND,"Point Salines, St. George's",Point Salines,St. George's,GD,12.004199,-61.7862,JFK,1.0
+EFHK,HEL,"Helsinki Vantaa, Helsinki",Vantaa,Helsinki,FI,60.3172,24.9633,JFK,1.0
+KEGE,EGE,"Eagle County Regional, Eagle",County Regional,Eagle,US,39.6426,-106.918,JFK,1.0
+OKBK,KWI,"Kuwait, Kuwait City",Kuwait,Kuwait City,KW,29.2266,47.9689,JFK,1.0
+MMMY,MTY,"General Mariano Escobedo, Monterrey",General Mariano Escobedo,Monterrey,MX,25.7785,-100.107,JFK,1.0
+VABB,BOM,"Chhatrapati Shivaji, Mumbai",Chhatrapati Shivaji,Mumbai,IN,19.0887,72.8679,JFK,1.0
+EDDM,MUC,"Munich, Munich",,Munich,DE,48.3538,11.7861,JFK,1.0
+KSNA,SNA,"John Wayne -Orange County, Santa Ana",John Wayne -Orange County,Santa Ana,US,33.6757,-117.868,JFK,1.0
+CYUL,YUL,"Montréal Pierre Elliott Trudeau, Montréal",Pierre Elliott Trudeau,Montréal,CA,45.4706,-73.7408,JFK,1.0
+KPSP,PSP,"Palm Springs, Palm Springs",,Palm Springs,US,33.8297,-116.507,JFK,1.0
+TJPS,PSE,"Mercedita, Ponce",Mercedita,Ponce,PR,18.0083,-66.563,JFK,1.0
+MTPP,PAP,"Toussaint Louverture, Port-au-Prince",Toussaint Louverture,Port-au-Prince,HT,18.58,-72.2925,JFK,1.0
+MDPP,POP,"Gregorio Luperon, Puerto Plata",Gregorio Luperon,Puerto Plata,DO,19.7579,-70.57,JFK,1.0
+MMPR,PVR,"Licenciado Gustavo Díaz Ordaz, Puerto Vallarta",Licenciado Gustavo Díaz Ordaz,Puerto Vallarta,MX,20.6801,-105.254,JFK,1.0
+KSMF,SMF,"Sacramento, Sacramento",,Sacramento,US,38.6954,-121.591,JFK,1.0
+SCEL,SCL,"Comodoro Arturo Merino Benítez, Santiago",Comodoro Arturo Merino Benítez,Santiago,CL,-33.393,-70.7858,JFK,1.0
+TLPL,UVF,"Hewanorra, Vieux Fort",Hewanorra,Vieux Fort,LC,13.7332,-60.9526,JFK,1.0
+WSSS,SIN,"Singapore Changi, Singapore",Changi,Singapore,SG,1.35019,103.994,JFK,1.0
+EPWA,WAW,"Warsaw Chopin, Warsaw",Chopin,Warsaw,PL,52.1657,20.9671,JFK,1.0
+SPJC,LIM,"Jorge Chávez, Lima",Jorge Chávez,Lima,PE,-12.0219,-77.1143,JFK,0.9
+EDDB,BER,"Berlin Brandenburg, Berlin",Brandenburg,Berlin,DE,52.35139,13.493889,JFK,0.86
+EKCH,CPH,"Copenhagen Kastrup, Copenhagen",Kastrup,Copenhagen,DK,55.6179,12.656,JFK,0.86
+MMGL,GDL,"Don Miguel Hidalgo Y Costilla, Guadalajara",Don Miguel Hidalgo Y Costilla,Guadalajara,MX,20.5218,-103.311,JFK,0.86
+KONT,ONT,"Ontario, Ontario",,Ontario,US,34.056,-117.601,JFK,0.86
+KRNO,RNO,"Reno Tahoe, Reno",Tahoe,Reno,US,39.4991,-119.768,JFK,0.86
+RJAA,NRT,"Narita, Tokyo",Narita,Tokyo,JP,35.7647,140.386,JFK,0.86
+GOBD,DSS,"Blaise Diagne, Dakar",Blaise Diagne,Dakar,SN,14.671111,-17.066944,JFK,0.71
+EGPH,EDI,"Edinburgh, Edinburgh",,Edinburgh,GB,55.95,-3.372499,JFK,0.71
+EBLG,LGG,"Liège, Liège",,Liège,BE,50.6374,5.44322,JFK,0.71
+ENGM,OSL,"Oslo Gardermoen, Oslo",Gardermoen,Oslo,NO,60.1939,11.100399,JFK,0.71
+KSLK,SLK,"Adirondack Regional, Saranac Lake",Adirondack Regional,Saranac Lake,US,44.3853,-74.2062,JFK,0.71
+CYVR,YVR,"Vancouver, Vancouver",,Vancouver,CA,49.1939,-123.184,JFK,0.71
+KHPN,HPN,"Westchester County, White Plains",Westchester County,White Plains,US,41.067,-73.7076,JFK,0.71
+TFFR,PTP,"Pointe-à-Pitre Le Raizet, Pointe-à-Pitre Le Raizet",,Pointe-à-Pitre Le Raizet,GP,16.2653,-61.5318,JFK,0.64
+LYBE,BEG,"Belgrade Nikola Tesla, Belgrade",Nikola Tesla,Belgrade,RS,44.8184,20.3091,JFK,0.57
+KBZN,BZN,"Gallatin Field, Bozeman",Gallatin Field,Bozeman,US,45.7775,-111.153,JFK,0.57
+KOKC,OKC,"Will Rogers World, Oklahoma City",Will Rogers World,Oklahoma City,US,35.3931,-97.6007,JFK,0.57
+CYHZ,YHZ,"Halifax / Stanfield, Halifax",Stanfield,Halifax,CA,44.8808,-63.5086,JFK,0.57
+EDDP,LEJ,"Leipzig Halle, Leipzig",Halle,Leipzig,DE,51.4324,12.2416,JFK,0.57
+HKJK,NBO,"Jomo Kenyatta, Nairobi",Jomo Kenyatta,Nairobi,KE,-1.319239,36.9278,JFK,0.57
+KMVY,MVY,"Martha's Vineyard, Martha's Vineyard",,Martha's Vineyard,US,41.3931,-70.6143,JFK,0.57
+EPRZ,RZE,"Rzeszów-Jasionka, Rzeszów",Jasionka,Rzeszów,PL,50.11,22.019,JFK,0.57
+CYYC,YYC,"Calgary, Calgary",,Calgary,CA,51.1139,-114.02,JFK,0.43
+CYHM,YHM,"John C. Munro Hamilton, Hamilton",John C. Munro,Hamilton,CA,43.1736,-79.935,JFK,0.43
+KISP,ISP,"Long Island Mac Arthur, Islip",Long Island Mac Arthur,Islip,US,40.7952,-73.1002,JFK,0.43
+OEJN,JED,"King Abdulaziz, Jeddah",King Abdulaziz,Jeddah,SA,21.6796,39.1565,JFK,0.43
+KISO,ISO,"Kinston Regional Jetport At Stallings Field, Kinston",Regional Jetport At Stallings Field,Kinston,US,35.3314,-77.6088,JFK,0.43
+RPLL,MNL,"Ninoy Aquino, Manila",Ninoy Aquino,Manila,PH,14.5086,121.02,JFK,0.43
+NZAA,AKL,"Auckland, Auckland",,Auckland,NZ,-37.0081,174.792,JFK,0.43
+OERK,RUH,"King Khaled, Riyadh",King Khaled,Riyadh,SA,24.9576,46.6988,JFK,0.43
+TNCC,CUR,"Hato, Willemstad",Hato,Willemstad,CW,12.188899,-68.9598,JFK,0.43
+SBGL,GIG,"RIOgaleão – Tom Jobim, Rio de Janeiro",RIOgaleão – Tom Jobim,Rio de Janeiro,BR,-22.81,-43.250557,JFK,0.31
+DXXX,LFW,"Lomé-Tokoin, Lomé",Tokoin,Lomé,TG,6.165609,1.25451,JFK,0.29
+OJAI,AMM,"Queen Alia, Amman",Queen Alia,Amman,JO,31.7226,35.9932,JFK,0.29
+KABQ,ABQ,"Albuquerque  Sunport, The Duke City",Albuquerque  Sunport,The Duke City,US,35.0402,-106.609,JFK,0.29
+KBUR,BUR,"Bob Hope, Burbank",Bob Hope,Burbank,US,34.2007,-118.359,JFK,0.29
+KSUA,SUA,"Witham Field, Stuart",Witham Field,Stuart,US,27.1817,-80.2211,JFK,0.29
+LPMA,FNC,"Madeira, Funchal",Madeira,Funchal,PT,32.6979,-16.7745,JFK,0.29
+KGAI,GAI,"Montgomery County Airpark, Gaithersburg",Montgomery County Airpark,Gaithersburg,US,39.1683,-77.166,JFK,0.29
+MUHA,HAV,"José Martí, Havana",José Martí,Havana,CU,22.9892,-82.4091,JFK,0.29
+KHEF,MNZ,"Manassas Regional /Harry P. Davis Field, Manassas",Regional /Harry P. Davis Field,Manassas,US,38.7214,-77.5154,JFK,0.29
+LFMN,NCE,"Nice-Côte d'Azur, Nice",Côte d'Azur,Nice,FR,43.6584,7.215869,JFK,0.29
+LPPD,PDL,"João Paulo II, Ponta Delgada",João Paulo II,Ponta Delgada,PT,37.7412,-25.6979,JFK,0.29
+KNZY,NZY,"North Island Naval Air Station-Halsey Field, San Diego",North Island Naval Air Station-Halsey Field,San Diego,US,32.6992,-117.215,JFK,0.29
+ZSPD,PVG,"Shanghai Pudong, Shanghai",Pudong,Shanghai,CN,31.1434,121.805,JFK,0.29
+UTTT,TAS,"Tashkent, Tashkent",,Tashkent,UZ,41.2579,69.2812,JFK,0.29
+LOWW,VIE,"Schwechat, Vienna",Schwechat,Vienna,AT,48.1103,16.5697,JFK,0.29
+CYWG,YWG,"Winnipeg / James Armstrong Richardson, Winnipeg City",Winnipeg / James Armstrong Richardson,Winnipeg City,CA,49.91,-97.2399,JFK,0.29
+TKPK,SKB,"Robert L. Bradshaw, Basseterre",Robert L. Bradshaw,Basseterre,KN,17.3112,-62.7187,JFK,0.14
+KBVY,BVY,"Beverly Municipal, Beverly",Municipal,Beverly,US,42.5842,-70.9165,JFK,0.14
+KBIS,BIS,"Bismarck Municipal, Bismarck",Municipal,Bismarck,US,46.7727,-100.746,JFK,0.14
+KCDW,CDW,"Essex County, Caldwell",Essex County,Caldwell,US,40.8752,-74.2814,JFK,0.14
+KCSG,CSG,"Columbus Metropolitan, Columbus",Metropolitan,Columbus,US,32.5163,-84.9389,JFK,0.14
+KAPA,APA,"Centennial, Denver",Centennial,Denver,US,39.5701,-104.849,JFK,0.14
+KDOV,DOV,"Dover Air Force Base, Dover",Air Force Base,Dover,US,39.1295,-75.466,JFK,0.14
+ZGGG,CAN,"Guangzhou Baiyun, Guangzhou",Baiyun,Guangzhou,CN,23.3924,113.299,JFK,0.14
+KBDL,BDL,"Bradley, Hartford",Bradley,Hartford,US,41.9389,-72.6832,JFK,0.14
+KJAC,JAC,"Jackson Hole, Jackson",Hole,Jackson,US,43.6073,-110.738,JFK,0.14
+KTYS,TYS,"McGhee Tyson, Knoxville",McGhee Tyson,Knoxville,US,35.811,-83.994,JFK,0.14
+KLNS,LNS,"Lancaster, Lancaster",,Lancaster,US,40.1217,-76.2961,JFK,0.14
+ELLX,LUX,"Luxembourg-Findel, Luxembourg",Findel,Luxembourg,LU,49.6266,6.21152,JFK,0.14
+KMCN,MCN,"Middle Georgia Regional, Macon",Middle Georgia Regional,Macon,US,32.6928,-83.6492,JFK,0.14
+KMSN,MSN,"Dane County Regional Truax Field, Madison",Dane County Regional Truax Field,Madison,US,43.1399,-89.3375,JFK,0.14
+KMMU,MMU,"Morristown Municipal, Morristown",Municipal,Morristown,US,40.7994,-74.4149,JFK,0.14
+KPHL,PHL,"Philadelphia, Philadelphia",,Philadelphia,US,39.8719,-75.2411,JFK,0.14
+TVSV,SVD,"E. T. Joshua, Kingstown",E. T. Joshua,Kingstown,VC,13.1443,-61.2109,JFK,0.14
+TTCP,TAB,"Tobago-Crown Point, Scarborough",Tobago-Crown Point,Scarborough,TT,11.1497,-60.8322,JFK,0.14
+KSTL,STL,"Lambert St Louis, Saint Louis",Lambert St Louis,Saint Louis,US,38.7487,-90.37,JFK,0.14
+KTEB,TEB,"Teterboro, Teterboro",,Teterboro,US,40.8501,-74.0608,JFK,0.14
+KICT,ICT,"Wichita Mid Continent, Wichita",Mid Continent,Wichita,US,37.6499,-97.4331,JFK,0.14
+LEZG,ZAZ,"Zaragoza Air Base, Zaragoza",Air Base,Zaragoza,ES,41.6662,-1.04155,JFK,0.14
