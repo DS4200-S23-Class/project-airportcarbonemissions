@@ -121,12 +121,15 @@ console.log(data_ready)
 FRAME2.selectAll('percentage')
 	  .data(data_ready)
 	  .join('path')
+
 	  .attr('d', d3.arc()
 	    .innerRadius(70)         // This is the size of the donut hole
 	    .outerRadius(radius)
 	    .startAngle(function(d) {return Math.PI*2 - d.startAngle;})
 		.endAngle(function(d) {return Math.PI*2 - d.endAngle})
 	  )
+	  // 	  .transition()
+
 	  .attr('fill', d => color(d.data[0]))
 	  .attr("stroke", "black")
 	  .style("stroke-width", "2px")
