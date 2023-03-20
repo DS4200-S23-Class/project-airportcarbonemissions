@@ -73,7 +73,7 @@ function changeMap() {
 
 map.on("moveend", update);
 
-/*
+
 
 const FRAME1 = d3.select("#airportvis") 
 					.append("svg")
@@ -118,14 +118,15 @@ d3.csv("data/finaloutput.csv").then((data) => {
 				.attr("fill", "red")
 })
 
-*/
 
 // Frame2: carbon emissions
 const FRAME2 = d3.select("#carbonvis")
 		          		.append("svg")
 		            		.attr("height", FRAME_HEIGHT)
 		            		.attr("width", FRAME_WIDTH)
-		            		.attr("class", "scatter-width");
+		            		.attr("class", "carbon-emi")
+		            	.append("g")
+		            		.attr("transform", `translate(${FRAME_WIDTH / 2},${FRAME_HEIGHT / 2})`);
 
 // function for builidng scatter plot (Sepal_length vs. Petal_Length)
 //function createvis(){
@@ -133,5 +134,47 @@ const FRAME2 = d3.select("#carbonvis")
 	//d3.csv("data/finaloutput.csv").then((data) => {
 	//};
 
-// call the functions
+const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left
+
+// Create dummy data
+const data = {a: 9, b: 91}
+
+// set the color scale
+const color = d3.scaleOrdinal()
+  .range(["blue", "transparent"])
+
+
+// Compute the position of each group on the pie:
+const pie = d3.pie()
+  .value(d=>d[1])
+
+// Compute the position of each group on the pie:
+const data_ready = pie(Object.entries(data))
+console.log(data_ready)
+
+// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+FRAME2.selectAll('percentage')
+	  .data(data_ready)
+	  .join('path')
+	  .attr('d', d3.arc()
+	    .innerRadius(70)         // This is the size of the donut hole
+	    .outerRadius(radius)
+	    .startAngle(function(d) {return Math.PI*2 - d.startAngle;})
+		.endAngle(function(d) {return Math.PI*2 - d.endAngle})
+	  )
+	  .attr('fill', d => color(d.data[0]))
+	  .attr("stroke", "black")
+	  .style("stroke-width", "2px")
+	  .style("opacity", 0.7)
+
+FRAME2.append('text').text('Origin to Destination (loading data)')
+                .attr('x', -250)
+                .attr('y', -150)
+                .attr('fill', 'black')
+
+FRAME2.append('text').text('x kg of CO2 (loading data)')
+                .attr('x', 50)
+                .attr('y', -150)
+                .attr('fill', 'black')
+
 
