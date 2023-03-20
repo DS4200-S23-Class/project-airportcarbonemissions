@@ -31,6 +31,12 @@ L.svg().addTo(map);
 
 // add points to map with d3
 function plotMap(filter) {
+
+	d3.select("#airportvis")
+			.select("svg")
+			.selectAll("*")
+			.remove();
+
 	d3.csv("data/finaloutput.csv").then((data) => {
 
 		filteredData = data.filter(function(row) {
