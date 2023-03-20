@@ -7,6 +7,16 @@
     <script src='js/d3.v6.1.1/d3.min.js'></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
 
+    <!-- import css stylesheet for leaflet library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <!-- import leaflet.js library -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
     <title>Carbon Emission for Airplane</title>
 </head>
 
@@ -122,14 +132,25 @@
     <div>
         <h2>Visualization</h2>
         <div class="vis-holder">
+
             <div class="left">
                 <h3>All Available Locations</h3>
+
+                <label for="start-airport">Starting Airport:</label>
+                <select name="start-airport-name" id="start-airport">
+                    <option value="BOS">Logan International Airport (Boston, MA)</option>
+                    <option value="JFK">John F. Kennedy International Airport (Queens, NY)</option>
+                </select>
+                <button type="button" onclick="changeMap()">Update</button>
+
                 <div id="airportvis"></div>
             </div>
+
             <div class="right">
                 <h3>Carbon Emission</h3>
                 <div id="carbonvis"></div>
             </div> 
+
         </div>
     </div>
     
