@@ -101,12 +101,15 @@ const FRAME2 = d3.select("#carbonvis")
 
 const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left
 
+
 // Create dummy data
-const data = {a: 9, b: 91}
+const data = {a: 9}
+data.b = 100-data.a
+
 
 // set the color scale
 const color = d3.scaleOrdinal()
-  .range(["blue", "transparent"])
+  .range(["#287AB8", "transparent"])
 
 
 // Compute the position of each group on the pie:
@@ -115,25 +118,39 @@ const pie = d3.pie()
 
 // Compute the position of each group on the pie:
 const data_ready = pie(Object.entries(data))
-console.log(data_ready)
+
+let arc = d3.arc()
+    .outerRadius(radius)
+    .innerRadius(70)
+    .startAngle(function(d) {return Math.PI*2 - d.startAngle})
+	.endAngle(function(d) {return Math.PI*2 - d.endAngle});
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 FRAME2.selectAll('percentage')
 	  .data(data_ready)
 	  .join('path')
-
-	  .attr('d', d3.arc()
-	    .innerRadius(70)         // This is the size of the donut hole
-	    .outerRadius(radius)
-	    .startAngle(function(d) {return Math.PI*2 - d.startAngle;})
-		.endAngle(function(d) {return Math.PI*2 - d.endAngle})
-	  )
-	  // 	  .transition()
-
-	  .attr('fill', d => color(d.data[0]))
+	  .attr('d', arc)
 	  .attr("stroke", "black")
-	  .style("stroke-width", "2px")
-	  .style("opacity", 0.7)
+	  .style("stroke-width", "1px")
+	  .attr('fill', "transparent")
+
+// animation for donut portion
+FRAME2.selectAll(".arc")
+	  .data(data_ready)
+	  .enter()
+	  .append("g")
+	  .attr("class", "arc")
+	  .append("path")
+	  .style("fill", function(d) {return color(d.data[0])})
+	  .style("opacity", 0.5)
+
+	  .transition().delay(function(d, i) { return i * 500;}).duration(500)
+	  .attrTween('d', function(d) {
+	       var i = d3.interpolate(d.endAngle, d.startAngle);
+	       return function(t) {
+	           d.startAngle = i(t);
+	         return arc(d)}})
+
 
 FRAME2.append('text').text('Origin to Destination (loading data)')
                 .attr('x', -250)
