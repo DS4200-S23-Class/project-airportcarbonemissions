@@ -33,14 +33,12 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 L.svg().addTo(map);
 
 const FRAME1 = d3.select("#airportvis")
-					.select("svg");
+	.select("svg");
 
 let coords;
 
 // add points to map with d3
 function plotMap(filter) {
-
-	console.log(filter);
 
 	if (filter == "JFK") {
 		coords = JFK_COORDS;
@@ -48,7 +46,7 @@ function plotMap(filter) {
 		coords = BOS_COORDS;
 	}
 
-	map.setView([coords["lat"], coords["lon"]], 10);
+	map.setView([coords["lat"], coords["lon"]], 8);
 
 	FRAME1.selectAll("*")
 		.remove();
@@ -71,22 +69,6 @@ function plotMap(filter) {
 			return row["from"] == filter;
 		})
 
-		function handleClick(event, d) {
-
-			FRAME1.selectAll("line")
-					.remove();
-
-			FRAME1.append("line")
-					.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
-					.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
-					.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
-					.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y)
-					.style("stroke", "blue")
-					.style("stroke-width", 1.5 * Math.log(map.getZoom()));
-
-			document.getElementById("currentLocation").innerHTML = "You are currently looking at: " + d.name;
-		}
-
 		FRAME1.selectAll("airportLocations")
 			.data(filteredData)
 			.enter()
@@ -99,9 +81,34 @@ function plotMap(filter) {
 			.attr("fill-opacity", .5)
 			.attr("stroke", "green")
 			.attr("stroke-width", map.getZoom() * 0.25)
-			.attr("pointer-events","visible")
+			.attr("pointer-events", "visible")
 			.on("click", handleClick);
 	})
+}
+
+function handleClick(event, d) {
+
+	FRAME1.selectAll("line")
+		.remove();
+
+	const LINE = FRAME1.append("line")
+						.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
+						.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
+						.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
+						.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y)
+						.style("stroke", "blue")
+						.style("stroke-width", 1.5 * Math.log(map.getZoom()));
+
+	function printText() {
+		LINE.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
+			.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
+			.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
+			.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y);
+	}
+
+	document.getElementById("currentLocation").innerHTML = "You are currently looking at: " + d.name;
+	map.on("moveend", printText);
+
 }
 
 function update() {
@@ -117,9 +124,8 @@ function changeMap() {
 	plotMap(selectedValue);
 }
 
-
-
 map.on("moveend", update);
+
 
 // Frame2: carbon emissions
 const FRAME2 = d3.select("#carbonvis")
