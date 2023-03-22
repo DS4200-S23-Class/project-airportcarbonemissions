@@ -32,65 +32,97 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // add additional svg to map for d3 points to be added
 L.svg().addTo(map);
 
+// select frame for future reference
 const FRAME1 = d3.select("#airportvis")
 	.select("svg");
 
+// establish coords as variable for future reference
 let coords;
 
 // add points to map with d3
 function plotMap(filter) {
 
+	// set value of coords depending on filter
 	if (filter == "JFK") {
 		coords = JFK_COORDS;
 	} else {
 		coords = BOS_COORDS;
 	}
 
+	// set view of leaflet map based on filter
 	map.setView([coords["lat"], coords["lon"]], 8);
 
+	// remove all previously plotted points/lines
 	FRAME1.selectAll("*")
 		.remove();
 
+	// add starting point (red dot)
 	FRAME1.selectAll("startAirport")
 		.data([coords])
 		.enter()
 		.append("circle")
-		.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
-		.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
-		.attr("r", map.getZoom() * 0.75)
-		.attr("fill", "red")
-		.attr("fill-opacity", .5)
-		.attr("stroke", "red")
-		.attr("stroke-width", map.getZoom() * 0.25);
+			.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
+			.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
+			.attr("r", map.getZoom() * 0.75)
+			.attr("fill", "red")
+			.attr("fill-opacity", .5)
+			.attr("stroke", "red")
+			.attr("stroke-width", map.getZoom() * 0.25);
 
+	// read csv file to add second round of points (green dots)
 	d3.csv("data/finaloutput.csv").then((data) => {
 
+		// filter the data such that the starting airport is based on filter
 		filteredData = data.filter(function (row) {
 			return row["from"] == filter;
 		})
 
+		// add points for all ending airports (green dots)
 		FRAME1.selectAll("airportLocations")
 			.data(filteredData)
 			.enter()
 			.append("circle")
-			.attr("class", "airportLocations")
-			.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
-			.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
-			.attr("r", map.getZoom() * 0.75)
-			.attr("fill", "green")
-			.attr("fill-opacity", .5)
-			.attr("stroke", "green")
-			.attr("stroke-width", map.getZoom() * 0.25)
-			.attr("pointer-events", "visible")
-			.on("click", handleClick);
+				.attr("class", "airportLocations")
+				.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
+				.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
+				.attr("r", map.getZoom() * 0.75)
+				.attr("fill", "green")
+				.attr("fill-opacity", .5)
+				.attr("stroke", "green")
+				.attr("stroke-width", map.getZoom() * 0.25)
+				.attr("pointer-events", "visible")
+			.on("click", handleClick)
+			.on("mouseover", pointMouseover)
+			.on("mouseout", pointMouseout);
 	})
 }
 
+// function to handle highlighting (mouseover)
+function pointMouseover(event, d) {
+	d3.select(this).transition()
+		.duration(150)
+		.attr("fill", "limegreen")
+		.attr("stroke", "limegreen")
+		.attr("r", map.getZoom() * 1.25);
+};
+
+// function to handle removal of highlighting (mouseout)
+function pointMouseout(event, d) {
+	d3.select(this).transition()
+		.duration(150)
+		.attr("fill", "green")
+		.attr("stroke", "green")
+		.attr("r", map.getZoom() * 0.75);
+};
+
+// function to handle clicking of points
 function handleClick(event, d) {
 
+	// remove all previously existing lines
 	FRAME1.selectAll("line")
 		.remove();
 
+	// create line that connects starting/ending point
 	const LINE = FRAME1.append("line")
 						.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
 						.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
@@ -99,18 +131,23 @@ function handleClick(event, d) {
 						.style("stroke", "blue")
 						.style("stroke-width", 1.5 * Math.log(map.getZoom()));
 
-	function printText() {
+	// editing coordinates when map is zoomed in/out
+	function adjustLine() {
 		LINE.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
 			.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
 			.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
 			.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y);
 	}
 
+	// updating text to indicate ending airport
 	document.getElementById("currentLocation").innerHTML = "You are currently looking at: " + d.name;
-	map.on("moveend", printText);
+
+	// adding adjustment for line when map is moved
+	map.on("moveend", adjustLine);
 
 }
 
+// function to update the coordinates of dots with zoom in/out
 function update() {
 	d3.selectAll("circle")
 		.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
@@ -118,12 +155,14 @@ function update() {
 		.attr("r", map.getZoom() * 0.75);
 }
 
+// function to change filters depending on dropdown selected
 function changeMap() {
 	let start_airport = document.getElementById("start-airport");
 	let selectedValue = start_airport.options[start_airport.selectedIndex].value;
 	plotMap(selectedValue);
 }
 
+// update coordinates of dots with zoom
 map.on("moveend", update);
 
 
