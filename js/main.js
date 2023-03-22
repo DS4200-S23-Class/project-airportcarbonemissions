@@ -71,6 +71,8 @@ function plotMap(filter) {
 
 	// read csv file to add second round of points (green dots)
 	d3.csv("data/finaloutput.csv").then((data) => {
+		// print data to console
+		console.log(data)
 
 		// filter the data such that the starting airport is based on filter
 		filteredData = data.filter(function (row) {
@@ -181,31 +183,31 @@ const FRAME2 = d3.select("#carbonvis")
 //d3.csv("data/finaloutput.csv").then((data) => {
 //};
 
-const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left
+const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left;
 
 
 // Create dummy data
-const data = { a: 9 }
-data.b = 100 - data.a
+const data = { a: 9 };
+data.b = 100 - data.a;
 
 
 // set the color scale
 const color = d3.scaleOrdinal()
-	.range(["#287AB8", "transparent"])
+	.range(["#287AB8", "transparent"]);
 
 
 // Compute the position of each group on the pie:
 const pie = d3.pie()
-	.value(d => d[1])
+	.value(d => d[1]);
 
 // Compute the position of each group on the pie:
-const data_ready = pie(Object.entries(data))
+const data_ready = pie(Object.entries(data));
 
 let arc = d3.arc()
 	.outerRadius(radius)
 	.innerRadius(70)
-	.startAngle(function (d) { return Math.PI * 2 - d.startAngle })
-	.endAngle(function (d) { return Math.PI * 2 - d.endAngle });
+	.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
+	.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
 
 // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 FRAME2.selectAll('percentage')
@@ -214,7 +216,7 @@ FRAME2.selectAll('percentage')
 	.attr('d', arc)
 	.attr("stroke", "black")
 	.style("stroke-width", "1px")
-	.attr('fill', "transparent")
+	.attr('fill', "transparent");
 
 // animation for donut portion
 FRAME2.selectAll(".arc")
@@ -223,27 +225,26 @@ FRAME2.selectAll(".arc")
 	.append("g")
 	.attr("class", "arc")
 	.append("path")
-	.style("fill", function (d) { return color(d.data[0]) })
+	.style("fill", function (d) {return color(d.data[0])})
 	.style("opacity", 0.5)
-
-	.transition().delay(function (d, i) { return i * 500; }).duration(500)
+	.transition().delay(function (d, i) {return i * 500}).duration(500)
 	.attrTween('d', function (d) {
-		var i = d3.interpolate(d.endAngle, d.startAngle);
+		let i = d3.interpolate(d.endAngle, d.startAngle);
 		return function (t) {
-			d.startAngle = i(t);
-			return arc(d)
+			d.startAngle = i(t)
+			return arc(d);
 		}
-	})
+	});
 
-
+// will load data in the text places in the future
 FRAME2.append('text').text('Origin to Destination (loading data)')
 	.attr('x', -250)
 	.attr('y', -150)
-	.attr('fill', 'black')
+	.attr('fill', 'black');
 
 FRAME2.append('text').text('x kg of CO2 (loading data)')
 	.attr('x', 50)
 	.attr('y', -150)
-	.attr('fill', 'black')
+	.attr('fill', 'black');
 
 
