@@ -35,3 +35,9 @@ h1, h2, h3 {
   width: 800px;
   height: 500px;
 }
+
+.tooltip {
+  position: absolute;
+  background-color: rgb(195, 205, 245);
+  padding: 5px;
+}
