@@ -96,8 +96,8 @@ function plotMap(filter) {
 			.on("click", handleClick)
 			.on("mouseover", pointMouseover)
 			.on("mouseout", pointMouseout);
-	})
-}
+	});
+};
 
 // function to handle highlighting (mouseover)
 function pointMouseover(event, d) {
@@ -155,14 +155,14 @@ function update() {
 		.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
 		.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
 		.attr("r", map.getZoom() * 0.75);
-}
+};
 
 // function to change filters depending on dropdown selected
 function changeMap() {
 	let start_airport = document.getElementById("start-airport");
 	let selectedValue = start_airport.options[start_airport.selectedIndex].value;
 	plotMap(selectedValue);
-}
+};
 
 // update coordinates of dots with zoom
 map.on("moveend", update);
@@ -185,11 +185,9 @@ const FRAME2 = d3.select("#carbonvis")
 
 const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left;
 
-
 // Create dummy data
 const data = { a: 9 };
 data.b = 100 - data.a;
-
 
 // set the color scale
 const color = d3.scaleOrdinal()
@@ -209,42 +207,47 @@ let arc = d3.arc()
 	.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
 	.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
 
-// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-FRAME2.selectAll('percentage')
-	.data(data_ready)
-	.join('path')
-	.attr('d', arc)
-	.attr("stroke", "black")
-	.style("stroke-width", "1px")
-	.attr('fill', "transparent");
+function donut_chart() {
 
-// animation for donut portion
-FRAME2.selectAll(".arc")
-	.data(data_ready)
-	.enter()
-	.append("g")
-	.attr("class", "arc")
-	.append("path")
-	.style("fill", function (d) {return color(d.data[0])})
-	.style("opacity", 0.5)
-	.transition().delay(function (d, i) {return i * 500}).duration(500)
-	.attrTween('d', function (d) {
-		let i = d3.interpolate(d.endAngle, d.startAngle);
-		return function (t) {
-			d.startAngle = i(t)
-			return arc(d);
-		}
-	});
+	// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+	FRAME2.selectAll('percentage')
+		.data(data_ready)
+		.join('path')
+		.attr('d', arc)
+		.attr("stroke", "black")
+		.style("stroke-width", "1px")
+		.attr('fill', "transparent");
 
-// will load data in the text places in the future
-FRAME2.append('text').text('Origin to Destination (loading data)')
-	.attr('x', -250)
-	.attr('y', -150)
-	.attr('fill', 'black');
+	// animation for donut portion
+	FRAME2.selectAll(".arc")
+		.data(data_ready)
+		.enter()
+		.append("g")
+		.attr("class", "arc")
+		.append("path")
+		.style("fill", function (d) {return color(d.data[0])})
+		.style("opacity", 0.5)
+			.transition().delay(function (d, i) {return i * 500}).duration(500)
+				.attrTween('d', function (d) {
+					let i = d3.interpolate(d.endAngle, d.startAngle);
+					return function (t) {
+						d.startAngle = i(t)
+						return arc(d);
+					};
+				});
 
-FRAME2.append('text').text('x kg of CO2 (loading data)')
-	.attr('x', 50)
-	.attr('y', -150)
-	.attr('fill', 'black');
+	// will load data in the text places in the future
+	FRAME2.append('text').text('Origin to Destination (loading data)')
+		.attr('x', -250)
+		.attr('y', -150)
+		.attr('fill', 'black');
 
+	FRAME2.append('text').text('x kg of CO2 (loading data)')
+		.attr('x', 50)
+		.attr('y', -150)
+		.attr('fill', 'black');
+		
+};
 
+// call the function
+donut_chart();
