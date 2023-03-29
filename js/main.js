@@ -1,6 +1,10 @@
 // Declare constants
 const FRAME_HEIGHT = 400;
 const FRAME_WIDTH = 800;
+const FRAME_HEIGHT2 = 450;
+const FRAME_WIDTH2 = 500;
+const FRAME_HEIGHT3 = 150;
+const FRAME_WIDTH3 = 500;
 const MARGINS = { left: 70, right: 70, top: 70, bottom: 70 };
 
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
@@ -139,55 +143,49 @@ function handleClick(event, d) {
 			.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
 			.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
 			.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y);
-	}
+	};
 
 	// updating text to indicate ending airport
-	document.getElementById("currentLocation").innerHTML = "You are currently looking at: " + d.name;
+	document.getElementById("currentLocation").innerHTML = "You are currently looking at flight to " + d.name;
 
 	// adding adjustment for line when map is moved
 	map.on("moveend", adjustLine);
 
 	// remove all previously existing texts
-	FRAME2.selectAll("text")
+	FRAME3.selectAll("text")
 		.remove();
 
 	// showing the origin and destination
-	FRAME2.append('text').text(d.from + " to " + d.iata)
-		.attr('x', -250)
-		.attr('y', -150)
-		.attr('fill', 'black');
-
-	// showing kg of CO2 emission
-	FRAME2.append('text').text(d.co2KGPerPerson + ' kg of CO2')
-		.attr('x', 150)
-		.attr('y', -150)
-		.attr('fill', 'black');
+	FRAME3.append('text').text(d.from + " to " + d.iata + ' will consume ' + d.co2KGPerPerson + ' kg of CO2')
+							.attr('x', -180)
+							.attr('y', -50)
+							.attr('fill', 'black');
 
 	// add metrics
-	FRAME2.append('text').text('taking this flight equals to: ')
-		.attr('x', 150)
-		.attr('y', -100)
-		.attr('fill', 'black');
+	FRAME3.append('text').text('Taking this flight equals to: ')
+							.attr('x', -180)
+							.attr('y', -10)
+							.attr('fill', 'black');
 
-	FRAME2.append('text').text('power a home for ' + Math.round(d.co2KGPerPerson/HOME*100)/100 + ' day')
-		.attr('x', 150)
-		.attr('y', -80)
-		.attr('fill', 'black');
+	FRAME3.append('text').text('power a home for ' + Math.round(d.co2KGPerPerson/HOME*100)/100 + ' days')
+							.attr('x', -180)
+							.attr('y', 10)
+							.attr('fill', 'black');
 
-	FRAME2.append('text').text('drive ' + Math.round(d.co2KGPerPerson/CAR*100)/100 + ' miles')
-		.attr('x', 150)
-		.attr('y', -60)
-		.attr('fill', 'black');
+	FRAME3.append('text').text('drive ' + Math.round(d.co2KGPerPerson/CAR*100)/100 + ' miles')
+							.attr('x', -180)
+							.attr('y', 30)
+							.attr('fill', 'black');
 
-	FRAME2.append('text').text('eat ' + Math.round(d.co2KGPerPerson/BURGER*100)/100 + ' burgers')
-		.attr('x', 150)
-		.attr('y', -40)
-		.attr('fill', 'black');
+	FRAME3.append('text').text('eat ' + Math.round(d.co2KGPerPerson/BURGER*100)/100 + ' burgers')
+							.attr('x', -180)
+							.attr('y', 50)
+							.attr('fill', 'black');
 
-	FRAME2.append('text').text('and can be absorbed by ' + Math.round(d.co2KGPerPerson/TREE*100)/100 + ' trees')
-		.attr('x', 150)
-		.attr('y', -20)
-		.attr('fill', 'black');
+	FRAME3.append('text').text('and can be absorbed by ' + Math.round(d.co2KGPerPerson/TREE*100)/100 + ' trees')
+							.attr('x', -180)
+							.attr('y', 70)
+							.attr('fill', 'black');
 
 	// create donut chart
 	donut_chart(d.percentageco2);
@@ -216,14 +214,22 @@ map.on("moveend", update);
 // Frame2: carbon emissions
 const FRAME2 = d3.select("#carbonvis")
 	.append("svg")
-	.attr("height", FRAME_HEIGHT)
-	.attr("width", FRAME_WIDTH)
+	.attr("height", FRAME_HEIGHT2)
+	.attr("width", FRAME_WIDTH2)
 	.attr("class", "carbon-emi")
 	.append("g")
-	.attr("transform", `translate(${FRAME_WIDTH / 2},${FRAME_HEIGHT / 2})`);
+	.attr("transform", `translate(${FRAME_WIDTH2 / 2},${FRAME_HEIGHT2 / 2})`);
 
+// Frame3: text append
+const FRAME3 = d3.select("#carbonvis")
+	.append("svg")
+	.attr("height", FRAME_HEIGHT3)
+	.attr("width", FRAME_WIDTH3)
+	.attr("class", "carbon-emi")
+	.append("g")
+	.attr("transform", `translate(${FRAME_WIDTH3 / 2},${FRAME_HEIGHT3 / 2})`);
 
-const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left;
+const radius = Math.min(FRAME_WIDTH2, FRAME_HEIGHT2) / 2 - MARGINS.left;
 
 function donut_chart(d) {
 	// remove the last chart

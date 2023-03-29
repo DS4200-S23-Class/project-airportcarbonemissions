@@ -22,11 +22,11 @@ h1, h2, h3 {
 
 /* set width of columns to be even */
 .left {
-  flex: 2;
+  flex: 65%;
 }
 
 .right {
-  flex: 1;
+  flex: 35%;
 }
 
 #airportvis {
