@@ -147,6 +147,51 @@ function handleClick(event, d) {
 	// adding adjustment for line when map is moved
 	map.on("moveend", adjustLine);
 
+	// remove all previously existing texts
+	FRAME2.selectAll("text")
+		.remove();
+
+	// showing the origin and destination
+	FRAME2.append('text').text(d.from + " to " + d.iata)
+		.attr('x', -250)
+		.attr('y', -150)
+		.attr('fill', 'black');
+
+	// showing kg of CO2 emission
+	FRAME2.append('text').text(d.co2KGPerPerson + ' kg of CO2')
+		.attr('x', 150)
+		.attr('y', -150)
+		.attr('fill', 'black');
+
+	// add metrics
+	FRAME2.append('text').text('taking this flight equals to: ')
+		.attr('x', 150)
+		.attr('y', -100)
+		.attr('fill', 'black');
+
+	FRAME2.append('text').text('power a home for ' + Math.round(d.co2KGPerPerson/HOME*100)/100 + ' day')
+		.attr('x', 150)
+		.attr('y', -80)
+		.attr('fill', 'black');
+
+	FRAME2.append('text').text('drive ' + Math.round(d.co2KGPerPerson/CAR*100)/100 + ' miles')
+		.attr('x', 150)
+		.attr('y', -60)
+		.attr('fill', 'black');
+
+	FRAME2.append('text').text('eat ' + Math.round(d.co2KGPerPerson/BURGER*100)/100 + ' burgers')
+		.attr('x', 150)
+		.attr('y', -40)
+		.attr('fill', 'black');
+
+	FRAME2.append('text').text('and can be absorbed by ' + Math.round(d.co2KGPerPerson/TREE*100)/100 + ' trees')
+		.attr('x', 150)
+		.attr('y', -20)
+		.attr('fill', 'black');
+
+	// create donut chart
+	donut_chart(d.percentageco2);
+
 }
 
 // function to update the coordinates of dots with zoom in/out
@@ -177,37 +222,37 @@ const FRAME2 = d3.select("#carbonvis")
 	.append("g")
 	.attr("transform", `translate(${FRAME_WIDTH / 2},${FRAME_HEIGHT / 2})`);
 
-// function for builidng scatter plot (Sepal_length vs. Petal_Length)
-//function createvis(){
-
-//d3.csv("data/finaloutput.csv").then((data) => {
-//};
 
 const radius = Math.min(FRAME_WIDTH, FRAME_HEIGHT) / 2 - MARGINS.left;
 
-// Create dummy data
-const data = { a: 9 };
-data.b = 100 - data.a;
+function donut_chart(d) {
+	// remove the last chart
+	FRAME2.selectAll('.arc')
+			.remove()
 
-// set the color scale
-const color = d3.scaleOrdinal()
-	.range(["#287AB8", "transparent"]);
+	FRAME2.selectAll('path')
+			.remove()
 
+	// load data
+	const data = {a: d};
+	data.b = 100 - data.a;
 
-// Compute the position of each group on the pie:
-const pie = d3.pie()
-	.value(d => d[1]);
+	// set the color scale
+	const color = d3.scaleOrdinal()
+		.range(["#287AB8", "transparent"]);
 
-// Compute the position of each group on the pie:
-const data_ready = pie(Object.entries(data));
+	// Compute the position of each group on the pie:
+	const pie = d3.pie()
+		.value(d => d[1]);
 
-let arc = d3.arc()
-	.outerRadius(radius)
-	.innerRadius(70)
-	.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
-	.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
+	// Compute the position of each group on the pie:
+	const data_ready = pie(Object.entries(data));
 
-function donut_chart() {
+	let arc = d3.arc()
+		.outerRadius(radius)
+		.innerRadius(70)
+		.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
+		.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
 
 	// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 	FRAME2.selectAll('percentage')
@@ -235,17 +280,6 @@ function donut_chart() {
 						return arc(d);
 					};
 				});
-
-	// will load data in the text places in the future
-	FRAME2.append('text').text('Origin to Destination (loading data)')
-		.attr('x', -250)
-		.attr('y', -150)
-		.attr('fill', 'black');
-
-	FRAME2.append('text').text('x kg of CO2 (loading data)')
-		.attr('x', 50)
-		.attr('y', -150)
-		.attr('fill', 'black');
 		
 };
 

@@ -1,4 +1,4 @@
-,iata,name,municipalityName,countryCode,lat,lon,from,averageDailyFlights,dist,co2KGPerPerson,percentageco2(%)
+,iata,name,municipalityName,countryCode,lat,lon,from,averageDailyFlights,dist,co2KGPerPerson,percentageco2
 0,DCA,"Ronald Reagan Washington National, District of Columbia",District of Columbia,US,38.8521,-77.0377,BOS,27.81,641.97,73.83,2.034590519023132
 1,JFK,"John F Kennedy, New York",New York,US,40.6398,-73.7789,BOS,21.14,300.3,34.53,0.9515699664346302
 2,MCO,"Orlando, Orlando",Orlando,US,28.4294,-81.309,BOS,17.29,1804.03,207.46,5.717135975572789
