@@ -128,6 +128,9 @@ function handleClick(event, d) {
 	FRAME1.selectAll("line")
 		.remove();
 
+	FRAME2.selectAll("*")
+		.remove();
+
 	// create line that connects starting/ending point
 	const LINE = FRAME1.append("line")
 						.attr("x1", map.latLngToLayerPoint([d.lat, d.lon]).x)
@@ -190,7 +193,7 @@ function handleClick(event, d) {
 	// create donut chart
 	donut_chart(d.percentageco2);
 
-}
+};
 
 // function to update the coordinates of dots with zoom in/out
 function update() {
@@ -256,9 +259,10 @@ function donut_chart(d) {
 
 	let arc = d3.arc()
 		.outerRadius(radius)
-		.innerRadius(70)
+		.innerRadius(radius*0.5)
 		.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
 		.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
+
 
 	// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
 	FRAME2.selectAll('percentage')
@@ -286,8 +290,58 @@ function donut_chart(d) {
 						return arc(d);
 					};
 				});
-		
-};
 
-// call the function
-donut_chart();
+
+
+	// Another arc that won't be drawn. Just for labels positioning
+	let outerArc = d3.arc()
+	  .innerRadius(radius * 0.9)
+	  .outerRadius(radius * 0.9)
+
+
+	// Add the polylines between chart and labels:
+	FRAME2.selectAll('allPolylines')
+	  .data(data_ready)
+	  .enter()
+	  .append('polyline')
+	    .attr("stroke", "black")
+	    .style("fill", "none")
+	    .attr("stroke-width", 1)
+	    .attr('points', function(d) {
+	      let posA = arc.centroid(d) // line insertion in the slice
+	      let posB = outerArc.centroid(d) // line break: we use the other arc generator that has been built only for that
+	      let posC = outerArc.centroid(d); // Label position = almost the same as posB
+	      let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
+	      posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+	      return [posA, posB, posC]
+	    });
+
+	// Add the polylines between chart and labels:
+	FRAME2.selectAll('allLabels')
+	  .data(data_ready)
+	  .enter()
+	  .append('text')
+	    .text(Math.round(d*100)/100+"%")
+	    .attr('transform', function(d) {
+	        let pos = outerArc.centroid(d);
+	        let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+	        pos[0] = radius * 0.99 * -1 - 40;
+	        return 'translate(' + pos + ')';
+	    })
+	    .style('text-anchor', 'start')
+	    console.log(d);
+
+	 FRAME2.selectAll('allLabels')
+	  .data(data_ready)
+	  .enter()
+	  .append('text')
+	   .text('of average annual carbon footage taken')
+	   .attr('transform', function(d) {
+	        let pos = outerArc.centroid(d);
+	        let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+	        pos[0] = radius * 0.99 * -1 - 40;
+	        pos[1] = pos[1] + 20;
+	        return 'translate(' + pos + ')';
+	   });
+
+};
