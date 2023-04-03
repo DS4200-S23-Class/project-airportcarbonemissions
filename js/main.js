@@ -25,10 +25,12 @@ const BOS_COORDS = { lat: 42.3643, lon: -71.0052 }
 
 // Frame1: airport 
 // initialize background map with leaflet
-let map = L.map("airportvis").setView([0, 0], 1);
+let map = L.map("airportvis").setView([0, 0], 2);
 
 // add tile layer with leaflet
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+	noWrap: true,
+	minZoom: 2,
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
