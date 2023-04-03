@@ -29,9 +29,8 @@ let map = L.map("airportvis").setView([0, 0], 2);
 
 // add tile layer with leaflet
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-	noWrap: true,
 	minZoom: 2,
-	maxZoom: 19,
+	maxZoom: 10,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
@@ -140,7 +139,7 @@ function handleClick(event, d) {
 						.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
 						.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y)
 						.style("stroke", "blue")
-						.style("stroke-width", 1.5 * Math.log(map.getZoom()));
+						.style("stroke-width", 1.5 * (10.7 - map.getZoom()) * d.averageDailyFlights);
 
 	// editing coordinates when map is zoomed in/out
 	function adjustLine() {
