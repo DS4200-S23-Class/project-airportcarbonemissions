@@ -1,10 +1,8 @@
 // Declare constants
 const FRAME_HEIGHT = 400;
 const FRAME_WIDTH = 800;
-const FRAME_HEIGHT2 = 450;
+const FRAME_HEIGHT2 = 400;
 const FRAME_WIDTH2 = 500;
-const FRAME_HEIGHT3 = 150;
-const FRAME_WIDTH3 = 500;
 const MARGINS = { left: 70, right: 70, top: 70, bottom: 70 };
 
 const VIS_HEIGHT = FRAME_HEIGHT - MARGINS.top - MARGINS.bottom;
@@ -202,7 +200,7 @@ const FRAME2 = d3.select("#carbonvis")
 	.attr("transform", `translate(${FRAME_WIDTH2 / 2},${FRAME_HEIGHT2 / 2})`);
 
 
-const radius = Math.min(FRAME_WIDTH2, FRAME_HEIGHT2) / 2 - MARGINS.left;
+const radius = Math.min(FRAME_WIDTH2, FRAME_HEIGHT2) / 1.65 - MARGINS.left;
 
 function donut_chart(d) {
 	// remove the last chart
@@ -289,13 +287,6 @@ function donut_chart(d) {
 	      posC[0] = radius * 0.8;
 	      return [posA, posB, posC]
 	    });
-
-
-	FRAME2.append('text')
-	.text('percentage of average annual carbon footprint per passenger')
-	.attr('x', -225)
-	.attr('y', -180)
-	.attr('fill', 'black');
 
   FRAME2.selectAll("allLabels")
     .data(data_ready)
