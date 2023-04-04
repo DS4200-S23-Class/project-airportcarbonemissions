@@ -138,26 +138,26 @@
 
             <div class="left">
                 <h3>All Available Locations</h3>
+                <div id='infoair'>
+                    <label for="start-airport">Starting Airport:</label>
+                    <select name="start-airport-name" id="start-airport">
+                        <option value="BOS">Logan International Airport (Boston, MA)</option>
+                        <option value="JFK">John F. Kennedy International Airport (Queens, NY)</option>
+                    </select>
+                    <button type="button" onclick="changeMap()">Update</button>
 
-                <label for="start-airport">Starting Airport:</label>
-                <select name="start-airport-name" id="start-airport">
-                    <option value="BOS">Logan International Airport (Boston, MA)</option>
-                    <option value="JFK">John F. Kennedy International Airport (Queens, NY)</option>
-                </select>
-                <button type="button" onclick="changeMap()">Update</button>
-
-                <p id="currentLocation"> You are currently looking at flight to: </p>
-
+                    <p id="currentLocation"> You are currently looking at flight to: </p>
+                </div>
                 <div id="airportvis"></div>
             </div>
 
             <div class="right">
                 <h3>Carbon Emission</h3>
-                <p>percentage of average annual carbon footprint per passenger</p>
+                <p id='title'>Percentage of Average Annual Carbon Footprint Per Passenger</p>
                 <div id="carbonvis"></div>
                 <div id="carbonvistable">
                     <p id='distance'></p>
-                    <table>
+                    <table id='infotable'>
                       <tr>
                           <td>This is equivalent to: </td>
                           <td>&#x1F3E0 Powering a home for:</td>
