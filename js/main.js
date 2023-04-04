@@ -165,30 +165,15 @@ function handleClick(event, d) {
 							.attr('fill', 'black');
 
 	// add metrics
-	FRAME3.append('text').text('Taking this flight equals to: ')
-							.attr('x', -180)
-							.attr('y', -10)
-							.attr('fill', 'black');
 
-	FRAME3.append('text').text('power a home for ' + Math.round(d.co2KGPerPerson/HOME*100)/100 + ' days')
-							.attr('x', -180)
-							.attr('y', 10)
-							.attr('fill', 'black');
+	document.getElementById("house").innerHTML = Math.round(d.co2KGPerPerson/HOME*100)/100 + ' days';
 
-	FRAME3.append('text').text('drive ' + Math.round(d.co2KGPerPerson/CAR*100)/100 + ' miles')
-							.attr('x', -180)
-							.attr('y', 30)
-							.attr('fill', 'black');
+	document.getElementById("drive").innerHTML = Math.round(d.co2KGPerPerson/CAR*100)/100 + ' miles';
 
-	FRAME3.append('text').text('eat ' + Math.round(d.co2KGPerPerson/BURGER*100)/100 + ' burgers')
-							.attr('x', -180)
-							.attr('y', 50)
-							.attr('fill', 'black');
+	document.getElementById("burger").innerHTML = Math.round(d.co2KGPerPerson/BURGER*100)/100 + ' burgers';
 
-	FRAME3.append('text').text('and can be absorbed by ' + Math.round(d.co2KGPerPerson/TREE*100)/100 + ' trees')
-							.attr('x', -180)
-							.attr('y', 70)
-							.attr('fill', 'black');
+	document.getElementById("tree").innerHTML = Math.round(d.co2KGPerPerson/TREE*100)/100 + ' trees';
+
 
 	// create donut chart
 	donut_chart(d.percentageco2);
