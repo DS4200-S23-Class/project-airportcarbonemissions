@@ -152,7 +152,7 @@ function handleClick(event, d) {
 
 
 	// add metrics
-	document.getElementById("distance").innerHTML = d.from + " to " + d.iata + ' will consume ' + d.co2KGPerPerson + ' kg of CO2';
+	document.getElementById("distance").innerHTML = d.from + " to " + d.iata + ' will emit ' + d.co2KGPerPerson + ' kg of CO2 per passenger';
 
 	document.getElementById("house").innerHTML = Math.round(d.co2KGPerPerson/HOME*100)/100 + ' days';
 
