@@ -160,7 +160,7 @@ function handleClick(event, d) {
 		.remove();
 
 	// showing the origin and destination
-	FRAME3.append('text').text(d.from + " to " + d.iata + ' will consume ' + d.co2KGPerPerson + ' kg of CO2')
+	FRAME3.append('text').text(d.from + " to " + d.iata + ' will emit ' + d.co2KGPerPerson + ' kg of CO2 per passenger')
 							.attr('x', -180)
 							.attr('y', -50)
 							.attr('fill', 'black');
@@ -308,7 +308,7 @@ function donut_chart(d) {
 
 
 	FRAME2.append('text')
-	.text('percentage of average annual carbon footage per person taken')
+	.text('percentage of average annual carbon footprint per passenger')
 	.attr('x', -225)
 	.attr('y', -180)
 	.attr('fill', 'black');
