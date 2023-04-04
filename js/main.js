@@ -155,17 +155,9 @@ function handleClick(event, d) {
 	// adding adjustment for line when map is moved
 	map.on("moveend", adjustLine);
 
-	// remove all previously existing texts
-	FRAME3.selectAll("text")
-		.remove();
-
-	// showing the origin and destination
-	FRAME3.append('text').text(d.from + " to " + d.iata + ' will emit ' + d.co2KGPerPerson + ' kg of CO2 per passenger')
-							.attr('x', -180)
-							.attr('y', -50)
-							.attr('fill', 'black');
 
 	// add metrics
+	document.getElementById("distance").innerHTML = d.from + " to " + d.iata + ' will consume ' + d.co2KGPerPerson + ' kg of CO2';
 
 	document.getElementById("house").innerHTML = Math.round(d.co2KGPerPerson/HOME*100)/100 + ' days';
 
@@ -209,14 +201,6 @@ const FRAME2 = d3.select("#carbonvis")
 	.append("g")
 	.attr("transform", `translate(${FRAME_WIDTH2 / 2},${FRAME_HEIGHT2 / 2})`);
 
-// Frame3: text append
-const FRAME3 = d3.select("#carbonvis")
-	.append("svg")
-	.attr("height", FRAME_HEIGHT3)
-	.attr("width", FRAME_WIDTH3)
-	.attr("class", "carbon-emi")
-	.append("g")
-	.attr("transform", `translate(${FRAME_WIDTH3 / 2},${FRAME_HEIGHT3 / 2})`);
 
 const radius = Math.min(FRAME_WIDTH2, FRAME_HEIGHT2) / 2 - MARGINS.left;
 
