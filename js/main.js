@@ -294,16 +294,19 @@ function donut_chart(d) {
 
 
 
-	// Another arc that won't be drawn. Just for labels positioning
+	// Another arc that won't be drawn. Just for labels positioning.
 	let outerArc = d3.arc()
 	  .innerRadius(radius * 0.9)
 	  .outerRadius(radius * 0.9)
 
 
-	// Add the polylines between chart and labels:
+	// Add the labels for percentage
 	FRAME2.selectAll('allPolylines')
 	  .data(data_ready)
 	  .enter()
+	  .filter(function(d) {
+	    return d.index == 1 && d.value < 6;
+	  })
 	  .append('polyline')
 	    .attr("stroke", "black")
 	    .style("fill", "none")
@@ -313,36 +316,51 @@ function donut_chart(d) {
 	      let posB = outerArc.centroid(d) // line break: we use the other arc generator that has been built only for that
 	      let posC = outerArc.centroid(d); // Label position = almost the same as posB
 	      let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
-	      posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+	      posB[0] = posB[0] * -1
+	      posC[0] = radius * 0.8;
 	      return [posA, posB, posC]
 	    });
 
-	// Add the polylines between chart and labels:
-	FRAME2.selectAll('allLabels')
-	  .data(data_ready)
-	  .enter()
-	  .append('text')
-	    .text(Math.round(d*100)/100+"%")
-	    .attr('transform', function(d) {
-	        let pos = outerArc.centroid(d);
-	        let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
-	        pos[0] = radius * 0.99 * -1 - 40;
-	        return 'translate(' + pos + ')';
-	    })
-	    .style('text-anchor', 'start')
-	    console.log(d);
 
-	 FRAME2.selectAll('allLabels')
-	  .data(data_ready)
-	  .enter()
-	  .append('text')
-	   .text('of average annual carbon footage taken')
-	   .attr('transform', function(d) {
-	        let pos = outerArc.centroid(d);
-	        let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
-	        pos[0] = radius * 0.99 * -1 - 40;
-	        pos[1] = pos[1] + 20;
-	        return 'translate(' + pos + ')';
-	   });
+	FRAME2.append('text')
+	.text('percentage of average annual carbon footage per person taken')
+	.attr('x', -225)
+	.attr('y', -180)
+	.attr('fill', 'black');
+
+  FRAME2.selectAll("allLabels")
+    .data(data_ready)
+    .enter()
+	.filter(function(d) {
+	    return d.index == 1 && d.value < 6;
+	  })
+    .append("text")
+    .attr('transform', function(d) {
+	    let pos = arc.centroid(d);
+	    pos[0] = radius * 0.83;
+	    pos[1] = pos[1] - 20;
+	    return 'translate(' + pos + ')';
+	  })
+    .text(function(d) {
+	return Math.round(d.value * 100) / 100 + '%';
+	})
+
+  FRAME2.selectAll("allLabels")
+    .data(data_ready)
+    .enter()
+	.filter(function(d) {
+	    return d.index == 1 && d.value > 6;
+	  })
+    .append("text")
+    .attr('transform', function(d) {
+	    let pos = arc.centroid(d);
+	    pos[0] = pos[0] - 20;
+	    return 'translate(' + pos + ')';
+	  })
+    .text(function(d) {
+	return Math.round(d.value * 100) / 100 + '%';
+	})
+
+
 
 };
