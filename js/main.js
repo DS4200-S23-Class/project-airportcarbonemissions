@@ -99,9 +99,15 @@ function plotMap(filter) {
 				.attr("pointer-events", "visible")
 			.on("click", handleClick)
 			.on("mouseover", pointMouseover)
+			.on("mousemove", pointMousemove)
 			.on("mouseout", pointMouseout);
 	});
 };
+
+const TOOLTIP = d3.select("#airportvis")
+			.append("div")
+			.attr("class", "tooltip")
+			.style("z-index", "999")
 
 // function to handle highlighting (mouseover)
 function pointMouseover(event, d) {
@@ -110,8 +116,15 @@ function pointMouseover(event, d) {
 		.attr("fill", "limegreen")
 		.attr("stroke", "limegreen")
 		.attr("r", map.getZoom() * 1.25);
+	TOOLTIP.style("opacity", 1);
 };
 
+function pointMousemove(event, d) {
+	TOOLTIP.html("<b>" + d.name + " (" + d.iata + ")" + "</b><br>Distance from Start: " + d.dist + "<br>Average Daily Flights: " + d.averageDailyFlights + 
+				"<br>Coordinates: (" + d.lon + ", " + d.lat + ")")
+			.style("left", map.latLngToLayerPoint([d.lat, d.lon]).x + "px")
+			.style("top", map.latLngToLayerPoint([d.lat, d.lon]).y + "px");
+}
 // function to handle removal of highlighting (mouseout)
 function pointMouseout(event, d) {
 	d3.select(this).transition()
@@ -119,6 +132,8 @@ function pointMouseout(event, d) {
 		.attr("fill", "green")
 		.attr("stroke", "green")
 		.attr("r", map.getZoom() * 0.75);
+	TOOLTIP.style("opacity", 0)
+	
 };
 
 // function to handle clicking of points
