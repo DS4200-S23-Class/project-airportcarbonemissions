@@ -11,6 +11,13 @@ h1, h2, h3 {
   text-align: center;
 }
 
+#carbonvistable {
+  border-radius: 10px;
+  border-style: groove;
+  background-color: lightblue;
+  padding: 12px;
+}
+
 #title {
   text-align: center;
   text-decoration: underline;
