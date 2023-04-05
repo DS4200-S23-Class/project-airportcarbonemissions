@@ -17,6 +17,10 @@ const TREE = 21
 const JFK_COORDS = { lat: 40.6398, lon: -73.7789 }
 const BOS_COORDS = { lat: 42.3643, lon: -71.0052 }
 
+const SCALE = d3.scaleLinear()
+				.domain([0, 30])
+				.range([0.5, 7])
+
 
 // Frame1: airport 
 // initialize background map with leaflet
@@ -133,8 +137,9 @@ function handleClick(event, d) {
 						.attr("y1", map.latLngToLayerPoint([d.lat, d.lon]).y)
 						.attr("x2", map.latLngToLayerPoint([coords.lat, coords.lon]).x)
 						.attr("y2", map.latLngToLayerPoint([coords.lat, coords.lon]).y)
+						.attr("opacity", 0.5)
 						.style("stroke", "blue")
-						.style("stroke-width", 1.5 * (10.7 - map.getZoom()) * d.averageDailyFlights);
+						.style("stroke-width", (10.1 - map.getZoom()) * SCALE(d.averageDailyFlights));
 
 	// editing coordinates when map is zoomed in/out
 	function adjustLine() {
