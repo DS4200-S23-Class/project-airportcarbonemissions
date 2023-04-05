@@ -67,7 +67,7 @@ function plotMap(filter) {
 		.append("circle")
 			.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
 			.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
-			.attr("r", map.getZoom() * 0.75)
+			.attr("r", map.getZoom() * 0.9)
 			.attr("fill", "red")
 			.attr("fill-opacity", .5)
 			.attr("stroke", "red")
@@ -91,7 +91,7 @@ function plotMap(filter) {
 				.attr("class", "airportLocations")
 				.attr("cx", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).x })
 				.attr("cy", function (d) { return map.latLngToLayerPoint([d.lat, d.lon]).y })
-				.attr("r", map.getZoom() * 0.75)
+				.attr("r", map.getZoom() * 0.9)
 				.attr("fill", "green")
 				.attr("fill-opacity", .5)
 				.attr("stroke", "green")
@@ -108,7 +108,8 @@ function plotMap(filter) {
 const TOOLTIP = d3.select("#airportvis")
 			.append("div")
 			.attr("class", "tooltip")
-			.style("z-index", "999");
+			.style("z-index", "999")
+			.style("opacity", 0);
 
 // function to handle highlighting (mouseover)
 function pointMouseover(event, d) {
@@ -124,8 +125,8 @@ function pointMouseover(event, d) {
 function pointMousemove(event, d) {
 	TOOLTIP.html("<b>" + d.name + " (" + d.iata + ")" + "</b><br>Distance from Start: " + d.dist + "<br>Average Daily Flights: " + d.averageDailyFlights + 
 				"<br>Coordinates: (" + d.lon + ", " + d.lat + ")")
-			.style("left", map.latLngToLayerPoint([d.lat, d.lon]).x + "px")
-			.style("top", map.latLngToLayerPoint([d.lat, d.lon]).y + "px");
+			.style("left", (d3.pointer(event)[0] + 10) + "px")
+			.style("top", (d3.pointer(event)[1] - 10) + "px");
 }
 
 // function to handle removal of highlighting (mouseout)
@@ -134,9 +135,8 @@ function pointMouseout(event, d) {
 		.duration(150)
 		.attr("fill", "green")
 		.attr("stroke", "green")
-		.attr("r", map.getZoom() * 0.75);
-	TOOLTIP.style("opacity", 0)
-	
+		.attr("r", map.getZoom() * 0.9);
+	TOOLTIP.style("opacity", 0);
 };
 
 // function to handle clicking of points
