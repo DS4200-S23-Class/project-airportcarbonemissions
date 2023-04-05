@@ -104,10 +104,11 @@ function plotMap(filter) {
 	});
 };
 
+// create tooltip
 const TOOLTIP = d3.select("#airportvis")
 			.append("div")
 			.attr("class", "tooltip")
-			.style("z-index", "999")
+			.style("z-index", "999");
 
 // function to handle highlighting (mouseover)
 function pointMouseover(event, d) {
@@ -119,12 +120,14 @@ function pointMouseover(event, d) {
 	TOOLTIP.style("opacity", 1);
 };
 
+// add text to tooltip with more info + set position
 function pointMousemove(event, d) {
 	TOOLTIP.html("<b>" + d.name + " (" + d.iata + ")" + "</b><br>Distance from Start: " + d.dist + "<br>Average Daily Flights: " + d.averageDailyFlights + 
 				"<br>Coordinates: (" + d.lon + ", " + d.lat + ")")
 			.style("left", map.latLngToLayerPoint([d.lat, d.lon]).x + "px")
 			.style("top", map.latLngToLayerPoint([d.lat, d.lon]).y + "px");
 }
+
 // function to handle removal of highlighting (mouseout)
 function pointMouseout(event, d) {
 	d3.select(this).transition()
