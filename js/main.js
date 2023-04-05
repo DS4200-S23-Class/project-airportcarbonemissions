@@ -2,7 +2,7 @@
 const FRAME_HEIGHT = 400;
 const FRAME_WIDTH = 800;
 const FRAME_HEIGHT2 = 400;
-const FRAME_WIDTH2 = 500;
+const FRAME_WIDTH2 = 560;
 const MARGINS = { left: 70, right: 70, top: 70, bottom: 70 };
 
 // power a home for a day
@@ -340,7 +340,5 @@ function donut_chart(d) {
     .text(function(d) {
 	return Math.round(d.value * 100) / 100 + '%';
 	})
-
-
 
 };

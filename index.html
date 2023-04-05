@@ -98,13 +98,9 @@
             of their own footprint and make more environmentally-conscious choices when it comes to their purchases.
         </p>
 
-
-    </div>
-
-    <div class='content-column'>
         <h2>Background</h2>
-        TODO: Add link to report, demo video, link to data etc. here  
-        <h3>Data</h3>
+
+        <h3>1. Data</h3>
 
         <p>
         We are visualizing data of flight informations and corresponding carbon emissions per person in kilograms. The high-level task of our visualizations is to discover the data. The user is provided all of the data and is being asked to search through it for their answers.
@@ -127,9 +123,12 @@
         Since we only looked at flight routes of two airports (BOS and JFK) and the API calls only offer flight routes data for the current year (2023), our data is not comprehensive enough to analyze all operating flight routes in the world, or even just in the United States. However, it does provide insight for people to choose the most environmentally-friendly flight from Boston or New York City.
         </p>
 
-        <p>The link to our row dataset and final dataset:
+        <p>The link to our row dataset, final dataset and report:
         <li><td><a href="data/output.csv">Row dataset</a></td></li>
         <li><td><a href="data/finaloutput.csv">Airports</a></td></li>
+
+        <h3>2. Demo Video</h3>
+
     </div>
 
     <div>
@@ -137,7 +136,7 @@
         <div class="vis-holder">
 
             <div class="left">
-                <h3>All Available Locations</h3>
+                <h3 class='title'>All Available Locations</h3>
                 <div id='infoair'>
                     <label for="start-airport">Starting Airport:</label>
                     <select name="start-airport-name" id="start-airport">
@@ -152,7 +151,7 @@
             </div>
 
             <div class="right">
-                <h3>Carbon Emission</h3>
+                <h3 class='title'>Carbon Emission</h3>
                 <p id='title'>Percentage of Average Annual Carbon Footprint Per Passenger</p>
                 <div id="carbonvis"></div>
                 <div id="carbonvistable">
@@ -187,26 +186,27 @@
     
 
     <div>
-        <h2>Acknowledgements</h2><div>
-        <ul>
-          <li><a href=" ">IEEE visualization</a></li>
-          <li><a href="https://www.iea.org/reports/aviation">Aviation Carbon Emission</a></li>
-          <li><a href="https://rapidapi.com/aedbx-aedbx/api/aerodatabox">Flight APIs</a></li>
-          <li><a href="hhttps://www.carbonindependent.org/22.html#:~:text=CO2\%20emissions\%20from\%20aviation\%20fuel,CO2\%20per\%20passenger\%20per\%20hour">Calculation of carbon emission</a></li>
-          <li> <a href="https://ieeexplore.ieee.org/document/9594454">Peer-reviewed paper for flights carbon emission</a></li>
-          <li> <a href="http://ojs.ecsdev.org/index.php/ejsd/article/view/1210">Evaluation of Environmental Awareness of University Students</a></li>
-          <li> <a href="https://www.tandfonline.com/doi/full/10.1080/09669582.2017.1372442">Journal article</a></li>
-          <li> <a href="https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/#:~:text=A\%20carbon\%20footprint\%20is\%20the,is\%20closer\%20to\%204\%20tons">Evaluate Carbon Footprint</a></li>
-          <li> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9042946/">Peer-reviewed paper 2</a></li>
-          <li> <a href="https://d3-graph-gallery.com/graph/pie_basic.html">Donut Chart Basics</a></li>
-          <li><a href="https://bost.ocks.org/mike/leaflet/">D3 and Leaflet (1)</a></li>
-          <li><a href="https://observablehq.com/@sfu-iat355/intro-to-leaflet-d3-interactivity">D3 and Leaflet (2)</a></li>
-          <li><a href="https://blog.hubspot.com/website/html-dropdown">Dropdown Menu</a></li>
-          <li><a href="https://leafletjs.com/examples/zoom-levels/">Leaflet Zoom Levels</a></li>
-          <li><a href="https://d3-graph-gallery.com/graph/donut_label.html">Donut Chart Labels</a></li>
-          <li><a href="https://unicode.org/emoji/charts/full-emoji-list.html">Emoji in Codepoint form</a></li>
-        </ul>
-    </div>  
+        <div id='reference'>
+            <h2>Acknowledgements</h2>
+            <ul>
+              <li><a href=" ">IEEE visualization</a></li>
+              <li><a href="https://www.iea.org/reports/aviation">Aviation Carbon Emission</a></li>
+              <li><a href="https://rapidapi.com/aedbx-aedbx/api/aerodatabox">Flight APIs</a></li>
+              <li><a href="hhttps://www.carbonindependent.org/22.html#:~:text=CO2\%20emissions\%20from\%20aviation\%20fuel,CO2\%20per\%20passenger\%20per\%20hour">Calculation of carbon emission</a></li>
+              <li> <a href="https://ieeexplore.ieee.org/document/9594454">Peer-reviewed paper for flights carbon emission</a></li>
+              <li> <a href="http://ojs.ecsdev.org/index.php/ejsd/article/view/1210">Evaluation of Environmental Awareness of University Students</a></li>
+              <li> <a href="https://www.tandfonline.com/doi/full/10.1080/09669582.2017.1372442">Journal article</a></li>
+              <li> <a href="https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/#:~:text=A\%20carbon\%20footprint\%20is\%20the,is\%20closer\%20to\%204\%20tons">Evaluate Carbon Footprint</a></li>
+              <li> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9042946/">Peer-reviewed paper 2</a></li>
+              <li> <a href="https://d3-graph-gallery.com/graph/pie_basic.html">Donut Chart Basics</a></li>
+              <li><a href="https://bost.ocks.org/mike/leaflet/">D3 and Leaflet (1)</a></li>
+              <li><a href="https://observablehq.com/@sfu-iat355/intro-to-leaflet-d3-interactivity">D3 and Leaflet (2)</a></li>
+              <li><a href="https://blog.hubspot.com/website/html-dropdown">Dropdown Menu</a></li>
+              <li><a href="https://leafletjs.com/examples/zoom-levels/">Leaflet Zoom Levels</a></li>
+              <li><a href="https://d3-graph-gallery.com/graph/donut_label.html">Donut Chart Labels</a></li>
+              <li><a href="https://unicode.org/emoji/charts/full-emoji-list.html">Emoji in Codepoint form</a></li>
+            </ul>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
