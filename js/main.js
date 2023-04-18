@@ -6,20 +6,20 @@ const FRAME_WIDTH2 = 560;
 const MARGINS = { left: 70, right: 70, top: 70, bottom: 70 };
 
 // power a home for a day
-const HOME = 7.42
+const HOME = 7.42;
 // drive one mile 
-const CAR = .35
+const CAR = .35;
 // eat a hamburger 
-const BURGER = 2.84
+const BURGER = 2.84;
 // amount absorbed by a tree 
-const TREE = 21
+const TREE = 21;
 
-const JFK_COORDS = { lat: 40.6398, lon: -73.7789 }
-const BOS_COORDS = { lat: 42.3643, lon: -71.0052 }
+const JFK_COORDS = { lat: 40.6398, lon: -73.7789 };
+const BOS_COORDS = { lat: 42.3643, lon: -71.0052 };
 
 const SCALE = d3.scaleLinear()
 				.domain([0, 30])
-				.range([0.5, 7])
+				.range([0.5, 7]);
 
 
 // Frame1: airport 
@@ -49,9 +49,10 @@ function plotMap(filter) {
 	// set value of coords depending on filter
 	if (filter == "JFK") {
 		coords = JFK_COORDS;
-	} else {
+	} 
+	else {
 		coords = BOS_COORDS;
-	}
+	};
 
 	// set view of leaflet map based on filter
 	map.setView([coords["lat"], coords["lon"]], 8);
@@ -76,7 +77,7 @@ function plotMap(filter) {
 	// read csv file to add second round of points (green dots)
 	d3.csv("data/finaloutput.csv").then((data) => {
 		// print data to console
-		console.log(data)
+		console.log(data);
 
 		// filter the data such that the starting airport is based on filter
 		filteredData = data.filter(function (row) {
@@ -127,7 +128,7 @@ function pointMousemove(event, d) {
 				"<br>Coordinates: (" + d.lon + ", " + d.lat + ")")
 			.style("left", (d3.pointer(event)[0] + 10) + "px")
 			.style("top", (d3.pointer(event)[1] - 10) + "px");
-}
+};
 
 // function to handle removal of highlighting (mouseout)
 function pointMouseout(event, d) {
@@ -223,122 +224,113 @@ const FRAME2 = d3.select("#carbonvis")
 const radius = Math.min(FRAME_WIDTH2, FRAME_HEIGHT2) / 1.65 - MARGINS.left;
 
 function donut_chart(d) {
-	// remove the last chart
-	FRAME2.selectAll('.arc')
-			.remove()
 
-	FRAME2.selectAll('path')
-			.remove()
+  // remove the last chart
+  FRAME2.selectAll(".arc").remove();
 
-	// load data
-	const data = {a: d};
-	data.b = 100 - data.a;
+  FRAME2.selectAll("path").remove();
 
-	// set the color scale
-	const color = d3.scaleOrdinal()
-		.range(["#287AB8", "transparent"]);
+  // load data
+  const data = { a: d };
+  data.b = 100 - data.a;
 
-	// Compute the position of each group on the pie:
-	const pie = d3.pie()
-		.value(d => d[1]);
+  // set the color scale
+  const color = d3.scaleOrdinal().range(["#287AB8", "transparent"]);
 
-	// Compute the position of each group on the pie:
-	const data_ready = pie(Object.entries(data));
+  // Compute the position of each group on the pie:
+  const pie = d3.pie().value((d) => d[1]);
 
-	let arc = d3.arc()
-		.outerRadius(radius)
-		.innerRadius(radius*0.5)
-		.startAngle(function (d) {return Math.PI * 2 - d.startAngle})
-		.endAngle(function (d) {return Math.PI * 2 - d.endAngle});
+  // Compute the position of each group on the pie:
+  const data_ready = pie(Object.entries(data));
 
+  let arc = d3
+    .arc()
+    .outerRadius(radius)
+    .innerRadius(radius * 0.5)
+    .startAngle(function (d) {
+      return Math.PI * 2 - d.startAngle;
+    })
+    .endAngle(function (d) {
+      return Math.PI * 2 - d.endAngle;
+    });
 
-	// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-	FRAME2.selectAll('percentage')
-		.data(data_ready)
-		.join('path')
-		.attr('d', arc)
-		.attr("stroke", "black")
-		.style("stroke-width", "1px")
-		.attr('fill', "transparent");
+  // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+  FRAME2.selectAll("percentage")
+    .data(data_ready)
+    .join("path")
+    .attr("d", arc)
+    .attr("stroke", "black")
+    .style("stroke-width", "1px")
+    .attr("fill", "transparent");
 
-	// animation for donut portion
-	FRAME2.selectAll(".arc")
-		.data(data_ready)
-		.enter()
-		.append("g")
-		.attr("class", "arc")
-		.append("path")
-		.style("fill", function (d) {return color(d.data[0])})
-		.style("opacity", 0.5)
-			.transition().delay(function (d, i) {return i * 500}).duration(500)
-				.attrTween('d', function (d) {
-					let i = d3.interpolate(d.endAngle, d.startAngle);
-					return function (t) {
-						d.startAngle = i(t)
-						return arc(d);
-					};
-				});
-
-
-
-	// Another arc that won't be drawn. Just for labels positioning.
-	let outerArc = d3.arc()
-	  .innerRadius(radius * 0.9)
-	  .outerRadius(radius * 0.9)
-
-
-	// Add the labels for percentage
-	FRAME2.selectAll('allPolylines')
-	  .data(data_ready)
-	  .enter()
-	  .filter(function(d) {
-	    return d.index == 1 && d.value < 6;
-	  })
-	  .append('polyline')
-	    .attr("stroke", "black")
-	    .style("fill", "none")
-	    .attr("stroke-width", 1)
-	    .attr('points', function(d) {
-	      let posA = arc.centroid(d) // line insertion in the slice
-	      let posB = outerArc.centroid(d) // line break: we use the other arc generator that has been built only for that
-	      let posC = outerArc.centroid(d); // Label position = almost the same as posB
-	      let midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 // we need the angle to see if the X position will be at the extreme right or extreme left
-	      posB[0] = posB[0] * -1
-	      posC[0] = radius * 0.8;
-	      return [posA, posB, posC]
-	    });
-
-  FRAME2.selectAll("allLabels")
+  // animation for donut portion 
+ 	// & event listener - hover over, turns to blue and show the percentage
+  FRAME2.selectAll(".arc")
     .data(data_ready)
     .enter()
-	.filter(function(d) {
-	    return d.index == 1 && d.value < 6;
-	  })
-    .append("text")
-    .attr('transform', function(d) {
-	    let pos = arc.centroid(d);
-	    pos[0] = radius * 0.83;
-	    pos[1] = pos[1] - 20;
-	    return 'translate(' + pos + ')';
-	  })
-    .text(function(d) {
-	return Math.round(d.value * 100) / 100 + '%';
-	})
+    .append("path")
+    .attr("class", "arc")
+    .style("fill", function (d) {
+      return color(d.data[0]);
+    })
+    .style("opacity", 0.5)
+    .filter(function(d) {
+    	return d.index == 1
+    })
+    .on("mouseover", handleMouseover)
+    .on("mouseleave", handleMouseleave)
+    .on("mousemove", handleMousemove)
+    .transition()
+    .delay(function (d, i) {
+      return i * 500;
+    })
+    .duration(500)
+    .attrTween("d", function (d) {
+      let i = d3.interpolate(d.endAngle, d.startAngle);
+      return function (t) {
+        d.startAngle = i(t);
+        return arc(d);
+      };
+    });
 
-  FRAME2.selectAll("allLabels")
-    .data(data_ready)
-    .enter()
-	.filter(function(d) {
-	    return d.index == 1 && d.value > 6;
-	  })
-    .append("text")
-    .attr('transform', function(d) {
-	    let pos = arc.centroid(d);
-	    pos[0] = pos[0] - 20;
-	    return 'translate(' + pos + ')';
-	  })
-    .text(function(d) {
-	return Math.round(d.value * 100) / 100 + '%';
-	})
+  // Another arc that won't be drawn. Just for labels positioning.
+  let outerArc = d3
+    .arc()
+    .innerRadius(radius * 0.9)
+    .outerRadius(radius * 0.9);
+
+  // add tooltip object
+  const TOOLTIP2 = d3
+    .select("#carbonvis")
+    .append("div")
+    .attr("class", "tooltip2")
+    .style("opacity", 0);
+
+  // event functions
+  // mouseover
+  function handleMouseover() {
+  	d3.select(this)
+    .style("fill", 'blue')
+    TOOLTIP2.style("opacity", 1);
+  };
+
+  // mouseleave
+  function handleMouseleave() {
+		d3.select(this)
+    .style("fill", function (d) {
+      return color(d.data[0]);
+    });
+
+    TOOLTIP2.style("opacity", 0);
+  };
+
+  // mousemove
+  function handleMousemove(event, d) {
+    TOOLTIP2.html(Math.round(d.value * 100) / 100 + "%")
+      .style("left", event.pageX + 10 + "px")
+      .style("top", event.pageY - 50 + "px");
+};
 
 };
+
+
