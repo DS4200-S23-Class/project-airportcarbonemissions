@@ -1,0 +1,234 @@
+WEBVTT
+
+1
+01:00:00.000 --> 01:00:00.633
+  
+
+2
+01:00:00.633 --> 01:00:03.800
+Our visualization has two key components:
+
+3
+01:00:03.800 --> 01:00:05.849
+a map on the left,
+
+4
+01:00:05.849 --> 01:00:08.599
+and a pie chart to appear on the right.
+
+5
+01:00:08.599 --> 01:00:10.199
+Looking at the left,
+
+6
+01:00:10.199 --> 01:00:12.366
+the user can select a starting airport,
+
+7
+01:00:12.366 --> 01:00:14.500
+choosing between Logan International Airport
+
+8
+01:00:14.500 --> 01:00:16.099
+in Boston, Massachusetts,
+
+9
+01:00:16.099 --> 01:00:18.183
+or John F. Kennedy International Airport
+
+10
+01:00:18.183 --> 01:00:19.866
+in Queens, New York.
+
+11
+01:00:19.866 --> 01:00:21.400
+Because we are currently in Boston,
+
+12
+01:00:21.400 --> 01:00:24.250
+let's go with Logan International Airport.
+
+13
+01:00:24.250 --> 01:00:26.250
+Clicking "Update" will update the map
+
+14
+01:00:26.250 --> 01:00:28.199
+such that Logan International Airport
+
+15
+01:00:28.199 --> 01:00:31.199
+is located in the center and highlighted in red,
+
+16
+01:00:31.199 --> 01:00:32.316
+and all airports
+
+17
+01:00:32.316 --> 01:00:35.516
+that Logan International Airport offers flights to
+
+18
+01:00:35.516 --> 01:00:37.199
+is in green.
+
+19
+01:00:37.199 --> 01:00:39.316
+Highlighting [hovering] over a green point
+
+20
+01:00:39.316 --> 01:00:40.366
+will reveal a tooltip
+
+21
+01:00:40.366 --> 01:00:41.783
+that provides more information
+
+22
+01:00:41.783 --> 01:00:43.833
+about that particular location,
+
+23
+01:00:43.833 --> 01:00:45.750
+such as the airport name,
+
+24
+01:00:45.750 --> 01:00:47.400
+the airport abbreviation,
+
+25
+01:00:47.400 --> 01:00:49.199
+the distance from start,
+
+26
+01:00:49.199 --> 01:00:51.433
+the number of average daily flights,
+
+27
+01:00:51.433 --> 01:00:53.466
+and the coordinates.
+
+28
+01:00:53.466 --> 01:00:55.333
+If the user wishes,
+
+29
+01:00:55.333 --> 01:00:56.933
+they can click on a point
+
+30
+01:00:56.933 --> 01:00:58.716
+in order to create a blue line
+
+31
+01:00:58.716 --> 01:01:00.066
+between the starting airport
+
+32
+01:01:00.066 --> 01:01:01.699
+and the destination.
+
+33
+01:01:01.699 --> 01:01:03.366
+This line will change in width
+
+34
+01:01:03.366 --> 01:01:07.866
+depending on the number of average daily flights.
+
+35
+01:01:07.866 --> 01:01:12.366
+(And we can click a few for reference!)
+
+36
+01:01:12.366 --> 01:01:13.750
+After clicking the airports,
+
+37
+01:01:13.750 --> 01:01:15.533
+you'll notice that the pie chart on the right
+
+38
+01:01:15.533 --> 01:01:17.500
+has also changed.
+
+39
+01:01:17.500 --> 01:01:18.533
+The pie chart itself
+
+40
+01:01:18.533 --> 01:01:19.650
+represents the percentage
+
+41
+01:01:19.650 --> 01:01:22.650
+of average annual carbon footprint per passenger.
+
+42
+01:01:22.650 --> 01:01:24.400
+Hovering over this pie chart
+
+43
+01:01:24.400 --> 01:01:26.833
+will reveal the exact percentage.
+
+44
+01:01:26.833 --> 01:01:31.000
+Again, this applies for all points.
+
+45
+01:01:31.000 --> 01:01:32.633
+Finally, at the bottom,
+
+46
+01:01:32.633 --> 01:01:34.449
+it reveals more specific information
+
+47
+01:01:34.449 --> 01:01:35.916
+about the carbon footprint
+
+48
+01:01:35.916 --> 01:01:37.483
+and compares it to other items
+
+49
+01:01:37.483 --> 01:01:41.150
+that the user may already be familiar with.
+
+50
+01:01:41.150 --> 01:01:42.633
+Returning back to the map,
+
+51
+01:01:42.633 --> 01:01:44.433
+if the user wishes to see more points,
+
+52
+01:01:44.433 --> 01:01:48.066
+they are welcome to zoom out
+
+53
+01:01:48.066 --> 01:01:51.433
+and take a look at more areas available to them.
+
+54
+01:01:51.433 --> 01:01:55.066
+San Francisco has a particularly interesting line,
+
+55
+01:01:55.066 --> 01:01:58.316
+with the percentage being over 13%.
+
+56
+01:01:58.316 --> 01:01:59.966
+The user can also scroll around
+
+57
+01:01:59.966 --> 01:02:02.433
+to take a look at other international locations,
+
+58
+01:02:02.433 --> 01:02:04.666
+if they wish.
+
